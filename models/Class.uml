@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="Class">
+    <packagedElement xmi:type="uml:Class" xmi:id="_WWqjAMXIEeWJGZDQFUETWw" name="Person">
+      <ownedAttribute xmi:id="_bbg88sXIEeWJGZDQFUETWw" name="nachname"/>
+      <ownedAttribute xmi:id="_c4sFksXIEeWJGZDQFUETWw" name="vorname"/>
+      <ownedAttribute xmi:id="_deycQsXIEeWJGZDQFUETWw" name="gebdat"/>
+      <ownedAttribute xmi:id="_evICwsXIEeWJGZDQFUETWw" name="vater"/>
+      <ownedAttribute xmi:id="_gVMBosXIEeWJGZDQFUETWw" name="mutter"/>
+      <ownedAttribute xmi:id="_g8ddAsXIEeWJGZDQFUETWw" name="partner"/>
+      <ownedAttribute xmi:id="_io-CIsXIEeWJGZDQFUETWw" name="ahnenziffer"/>
+      <ownedOperation xmi:id="_kM89YMXIEeWJGZDQFUETWw" name="getAlter">
+        <ownedParameter xmi:id="_9cCmkMXJEeWJGZDQFUETWw" name="return" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_lmEFYsXIEeWJGZDQFUETWw" name="Operation1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_nY9maMXIEeWJGZDQFUETWw" name="PersonList">
+      <ownedAttribute xmi:id="_wQavQsXIEeWJGZDQFUETWw" name="count"/>
+      <ownedAttribute xmi:id="_C0qGgsXJEeWJGZDQFUETWw" name="list" type="_WWqjAMXIEeWJGZDQFUETWw"/>
+      <ownedOperation xmi:id="_o_m0EsXIEeWJGZDQFUETWw" name="add">
+        <ownedParameter xmi:id="_qZMdMMXIEeWJGZDQFUETWw" name="p" type="_WWqjAMXIEeWJGZDQFUETWw"/>
+      </ownedOperation>
+      <ownedOperation xmi:id="_tD03csXIEeWJGZDQFUETWw" name="remove">
+        <ownedParameter xmi:id="_t7A-IMXIEeWJGZDQFUETWw" name="p" type="_WWqjAMXIEeWJGZDQFUETWw"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_2kqUisXIEeWJGZDQFUETWw" name="A_&lt;personList>_&lt;person>" memberEnd="_2kqUi8XIEeWJGZDQFUETWw _2kqUjsXIEeWJGZDQFUETWw">
+      <ownedEnd xmi:id="_2kqUi8XIEeWJGZDQFUETWw" name="personList" type="_nY9maMXIEeWJGZDQFUETWw" association="_2kqUisXIEeWJGZDQFUETWw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2kqUjMXIEeWJGZDQFUETWw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2kqUjcXIEeWJGZDQFUETWw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_2kqUjsXIEeWJGZDQFUETWw" name="person" type="_WWqjAMXIEeWJGZDQFUETWw" association="_2kqUisXIEeWJGZDQFUETWw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2kqUj8XIEeWJGZDQFUETWw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2kqUkMXIEeWJGZDQFUETWw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_bJKMMMXJEeWJGZDQFUETWw" name="PrimitiveType1"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_BcknUMXLEeWJGZDQFUETWw" name="String"/>
+  </packagedElement>
+</uml:Model>

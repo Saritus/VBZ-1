@@ -1,0 +1,729 @@
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
+\begin_document
+\begin_header
+\textclass scrartcl
+\use_default_options true
+\maintain_unincluded_children false
+\language ngerman
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_math auto
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 3cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language german
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\align center
+
+\size larger
+Pflichtenheft zum Softwareentwicklungsprojekt
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\size large
+Lehrveranstaltung 
+\begin_inset Quotes gld
+\end_inset
+
+Software Engineering I und II
+\begin_inset Quotes grd
+\end_inset
+
+
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+29.
+ Januar 2016
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Entwickler: Julian Fuchs, Sebastian Mischke, Anja Handrianz
+\end_layout
+
+\begin_layout Standard
+\align center
+Auftraggeber: Prof.
+ Dr.-Ing.
+ habil.
+ Hartmut Fritzsche 
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+Bachelorstudiengang Medieninformatik
+\end_layout
+
+\begin_layout Standard
+\align center
+Hochschule für Technik und Wirtschaft Dresden
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Zielbestimmung 
+\end_layout
+
+\begin_layout Standard
+Die Applikation bietet dem Nutzer die Möglichkeit Informationen über Personen
+ sowie deren Verwandtschaftsbeziehungen einzutragen und auf einer Datenbank
+ abzuspeichern.
+ Zudem können die eingetragenen Daten grafisch ausgegeben und als Bilder
+ exportiert werden.
+ Es soll jedem Menschen ermöglichen, einen persönlichen Überblick über seine
+ Familie und deren Beziehungen zu bekommen.
+ Ebenso soll es die Arbeit von Personen im Bereich der Ahnenforschung erleichter
+n.
+\end_layout
+
+\begin_layout Enumerate
+Musskriterien
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Personendaten sowie die Stammbaumdaten werden in einer relationalen Datenbank
+ gespeichert
+\end_layout
+
+\begin_layout Enumerate
+Eine Ausgabe der Verwandtschaftsbeziehungen kann wahlweise als Tabelle oder
+ Graph erfolgen
+\end_layout
+
+\begin_layout Enumerate
+Es können neue Personen mit ihren Beziehungen angelegt werden
+\end_layout
+
+\begin_layout Enumerate
+Es können bereits existierende Personen und ihre Beziehungen editiert und
+ gelöscht werden
+\end_layout
+
+\begin_layout Enumerate
+Es können für eine Person sämtliche Verwandte ersten Grades ausgegeben werden
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sollkriterien
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Schriftgröße für die Anwendung ist veränderbar
+\end_layout
+
+\begin_layout Enumerate
+Als Systemsprache kann Deutsch oder Englisch gewählt werden
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Kannkriterien
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Neue Verwandtschaftsbeziehungen können über einen Graphen erstellt werden
+\end_layout
+
+\begin_layout Enumerate
+Die Darstellung der Verwandtschaftsbeziehungen kann als Bild abgespeichert
+ werden
+\end_layout
+
+\begin_layout Enumerate
+Graph der Verwandtschaftbeziehungen kann ausgedruckt werden
+\end_layout
+
+\begin_layout Enumerate
+Barrierefreiheit im Bezug auf die Schriftgröße und verwenden von Tooltips
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Produkteinsatz
+\end_layout
+
+\begin_layout Subsection
+Beschreibung des Problembereichs 
+\end_layout
+
+\begin_layout Standard
+Die Verwandtschaftsbeziehungen sollen ganz einfach über den Computer erfasst
+ werden.
+ Sie geben jedem Menschen eine persönliche Auskunft über seine Verwandtschaft
+ und deren Beziehungen.
+ Jeder Person wird eine eindeutige Ahnenziffer zugeteilt.
+ Diese besteht aus der Ahnenziffer des Vaters und der Person selbst.
+ Das heißt, die Ahnenziffer eines Kindes, egal ob männlich oder weiblich,
+ wird an die Ahnenziffer seines Vaters angehängt.
+ Dabei wird beim ersten Kind immer mit 1 begonnen.
+ Genealogie spielt nicht nur für uns und Historiker eine wichtige Rolle,
+ sondern stellt auch in der Medizin eine große Hilfe dar.
+ Vorraussetzung für die Anwendung ist ein funktionstüchtiger Computer mit
+ Internetzugang.
+ Die Software sollte außerdem Javaunterstützung aufweisen.
+ 
+\end_layout
+
+\begin_layout Enumerate
+Anwendungsbereich
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Medizin
+\end_layout
+
+\begin_layout Enumerate
+Ahnenforschung
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Zielgruppe
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Personen jedes Alters die Interesse an Ahnenforschung haben
+\end_layout
+
+\begin_layout Enumerate
+Personen die sich beruflich mit Genealogie beschäftigen 
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Glossar 
+\end_layout
+
+\begin_layout Description
+Genealogie/Ahnenforschung 
+\begin_inset Quotes gld
+\end_inset
+
+Forschungsgebiet, das sich mit der Herkunft und den Verwandtschaftsverhältnissen
+ bestimmter Personen, Familien, Sippen, mit Ursprung, Folge und Verwandtschaft
+ der Geschlechter befasst; Geschlechterkunde
+\begin_inset Quotes grd
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Ahnenziffer Bezeichnet ein logisch aufgebautes Nummerierungs-System der
+ Verwandtschaftsbeziehungen.
+\end_layout
+
+\begin_layout Description
+Stammbaum Aufstellung der Verwandtschaftsverhältnisse von Menschen (auch
+ Tieren) zur Beschreibung der Herkunft durch Nachweis möglichst vieler Vorfahren
+, oft in Form einer grafischen Darstellung oder einer bildlichen Darstellung
+ in Gestalt eines sich verzweigenden Baumes; Ahnentafel, Genealogie.
+\end_layout
+
+\begin_layout Description
+Verwandtschaft Zur gleichen Familie gehörend; gleicher Herkunft, Abstammung.
+\end_layout
+
+\begin_layout Description
+Verwandtschaftsgrad Der Verwandtschaftsgrad (auch Grad der Verwandtschaft)
+ ist eine Zahl, die sich auf zwei Bezugspersonen bezieht und etwas über
+ deren verwandtschaftliche Nähe aussagt und ist somit ein Maß für die Verwandtsc
+haft zweier Personen.
+ Verwandtschaft meint hier ausschließlich die Blutsverwandtschaft (lat.
+ consanguinitas), nicht andere Formen (wie z.B.
+ geistige Verwandtschaft, geistliche Verwandtschaft).
+ 
+\end_layout
+
+\begin_layout Subsection
+Modell des Problembereichs 
+\end_layout
+
+\begin_layout Standard
+UML Klassendiagramm
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/ClassDiagram.png
+	scale 110
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+* statt 1 bri Person *
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Geschäftsprozesse
+\end_layout
+
+\begin_layout Standard
+UML Aktivitätsdiagramm
+\end_layout
+
+\begin_layout Standard
+Es gibt zwei existierende Geschäftsprozesse.
+\end_layout
+
+\begin_layout Standard
+Zu einem dass Einpflegen / Anlegen von Datenbeständen und
+\end_layout
+
+\begin_layout Standard
+zum anderen das Anzeigen von Datenbeständen.
+\end_layout
+
+\begin_layout Standard
+Diese lassen sich durch folgende Geschäftsprozesse darstellen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/LoginActivity.png
+	scale 90
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/EditPersonDatabaseActivity.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/FamilyTreeActivity.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/DatabaseActivity.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/ShowDatabaseActivity.png
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Produktfunktionen
+\end_layout
+
+\begin_layout Standard
+Die Anwendung ermöglicht es, neue Personen in eine Datenbank einzutragen
+ und die Verwandtschaftsbeziehungen anzuzeigen.
+\end_layout
+
+\begin_layout Subsection
+Funktionale Anforderungen
+\end_layout
+
+\begin_layout Standard
+UML-Use-Case-Diagramm
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/UseCase.png
+	scale 70
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Benutzeroberfläche
+\end_layout
+
+\begin_layout Standard
+Die genaue Navigation ist unter 2.4 Geschäftsprozesse beschrieben.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/PersonEditor.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/PersonTable.png
+
+\end_inset
+
+
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/RSViewer.PNG
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/Settings.PNG
+
+\end_inset
+
+
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Produktdaten
+\end_layout
+
+\begin_layout Standard
+Datenbankhaltung erfolgt auf dem Server.
+ Der Benutzer muss keine Daten auf seinem Computer speichern, sondern greift
+ über die Anwendung auf die Datenbank zu.
+\end_layout
+
+\begin_layout Standard
+Der Nutzer kann mehrere Stammbäume unter verschiedenen Namen anlegen.
+ Es findet keine Personalisierung statt.
+\end_layout
+
+\begin_layout Section
+Produktcharakteristika 
+\end_layout
+
+\begin_layout Standard
+Die Software ist eine Java-Applikation, die während der Benutzung die Daten
+ lokal speichert.
+ Bei Bedarf kann der Nutzer diese auch in eine MySQL-Datenbank speichern.
+\end_layout
+
+\begin_layout Subsection
+Nichtfunktionale Anforderungen
+\end_layout
+
+\begin_layout Description
+Zeit: Diese ist vernachlässigbar, solange der Benutzer lokal arbeitet.
+ Durch den Zugriff auf die Datenbank können jedoch während des Speicherns
+ und des Ladens Wartezeiten entstehen.
+\end_layout
+
+\begin_layout Description
+Genauigkeit: Ausgabe der fehlerfreien & vollständigen Verwandtschaftsbeziehung
+ zwischen den jeweiligen Personen.
+\end_layout
+
+\begin_layout Description
+Qualität: Robustes Programm mit übersichtlicher Benutzeroberfläche und einer
+ selbsterklärenden Bedienung inklusive Tooltips.
+ Die Anpassbarkeit der Schriftgröße verbessert die Benutzerfreundlichkeit.
+\end_layout
+
+\begin_layout Subsection
+Technische Produktumgebung
+\end_layout
+
+\begin_layout Standard
+4.2.1 Software
+\end_layout
+
+\begin_layout Itemize
+Laufzeitumgebung: Java VRE ab Version 1.7
+\end_layout
+
+\begin_layout Itemize
+Betriebsystem: Linux, OSX ,Windows oder als Applet in einem Browser
+\end_layout
+
+\begin_layout Itemize
+Datenbankmanagementsystem: Zugriff auf MySQL-Server.
+ Bei entsprechender Systemnutzung kann dieser auch lokal installiert werden.
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Subsection
+Anforderungen an die Entwicklungsumgebung 
+\end_layout
+
+\begin_layout Standard
+Benötigt wird ein Computer mit Server zum entwickeln und testen der Software.
+\end_layout
+
+\begin_layout Standard
+Bevorzugte Entwicklungsumgebungen sind: 
+\end_layout
+
+\begin_layout Itemize
+Java-Editor 
+\end_layout
+
+\begin_layout Itemize
+Eclipse mit Topcased 
+\end_layout
+
+\begin_layout Itemize
+Sublime 
+\end_layout
+
+\begin_layout Itemize
+MySQL
+\end_layout
+
+\begin_layout Subsection
+Gliederung in Teilprodukte
+\end_layout
+
+\begin_layout Section
+Anhänge 
+\end_layout
+
+\begin_layout Section*
+Literatur 
+\end_layout
+
+\begin_layout Itemize
+Genealogie 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.duden.de/rechtschreibung/Genealogie"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Stammbaum 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://www.duden.de/rechtschreibung/Stammbaum"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Verwandtschaftsgrad 
+\begin_inset CommandInset href
+LatexCommand href
+target "http://wiki-de.genealogy.net/Verwandtschaftsgrad"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

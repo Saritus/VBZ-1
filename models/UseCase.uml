@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA">
+  <packagedElement xmi:type="uml:Package" xmi:id="_w8IxIM37EdqwVrslYOdUDA" name="UseCase">
+    <packagedElement xmi:type="uml:Actor" xmi:id="_Xka2EMRIEeWMv5rSwly7mg" name="Benutzer"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_c3y0MMRIEeWMv5rSwly7mg" name="Anmelden">
+      <extend xmi:id="_43cghcRJEeWMv5rSwly7mg" name="Extend1" extendedCase="_lGF14sRJEeWMv5rSwly7mg" extensionLocation="_43SvgMRJEeWMv5rSwly7mg"/>
+      <extend xmi:id="_5XzblcRJEeWMv5rSwly7mg" name="Extend2" extendedCase="_ulAAUsRJEeWMv5rSwly7mg" extensionLocation="_5XpqkMRJEeWMv5rSwly7mg"/>
+      <extend xmi:id="_MiddJcRLEeWMv5rSwly7mg" name="Extend3" extendedCase="_A1h78sRLEeWMv5rSwly7mg" extensionLocation="_MiTsIMRLEeWMv5rSwly7mg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ilaeUsRIEeWMv5rSwly7mg" name="Person Editieren">
+      <extend xmi:id="_aX_UdMRJEeWMv5rSwly7mg" name="Extend1" extendedCase="_mLhCUsRIEeWMv5rSwly7mg" extensionLocation="_aX2KgMRJEeWMv5rSwly7mg"/>
+      <extend xmi:id="_c0nu9cRJEeWMv5rSwly7mg" name="Extend2" extendedCase="_o3p4csRIEeWMv5rSwly7mg" extensionLocation="_c0d98MRJEeWMv5rSwly7mg"/>
+      <extend xmi:id="_dS3KJcRJEeWMv5rSwly7mg" name="Extend3" extendedCase="_snr0gsRIEeWMv5rSwly7mg" extensionLocation="_dStZIMRJEeWMv5rSwly7mg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_mLhCUsRIEeWMv5rSwly7mg" name="Person löschen">
+      <extensionPoint xmi:id="_aX2KgMRJEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_o3p4csRIEeWMv5rSwly7mg" name="Neue Person anlegen">
+      <extensionPoint xmi:id="_c0d98MRJEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_snr0gsRIEeWMv5rSwly7mg" name="Personendaten ändern">
+      <extensionPoint xmi:id="_dStZIMRJEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_w5jSVsRIEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;editieren>" memberEnd="_w5jSV8RIEeWMv5rSwly7mg _w5jSWsRIEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_w5jSV8RIEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_w5jSVsRIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w5jSWMRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w5jSWcRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_w5jSWsRIEeWMv5rSwly7mg" name="editieren" type="_ilaeUsRIEeWMv5rSwly7mg" association="_w5jSVsRIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w5jSW8RIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w5jSXMRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xZwcZ8RIEeWMv5rSwly7mg" name="A_&lt;editieren>_&lt;person Löschen>" memberEnd="_xZwcaMRIEeWMv5rSwly7mg _xZwca8RIEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_xZwcaMRIEeWMv5rSwly7mg" name="editieren" type="_ilaeUsRIEeWMv5rSwly7mg" association="_xZwcZ8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xZwcacRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xZwcasRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_xZwca8RIEeWMv5rSwly7mg" name="person Löschen" type="_mLhCUsRIEeWMv5rSwly7mg" association="_xZwcZ8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xZwcbMRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xZwcbcRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_xy8_h8RIEeWMv5rSwly7mg" name="A_&lt;editieren>_&lt;neue Person anlegen>" memberEnd="_xy8_iMRIEeWMv5rSwly7mg _xy8_i8RIEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_xy8_iMRIEeWMv5rSwly7mg" name="editieren" type="_ilaeUsRIEeWMv5rSwly7mg" association="_xy8_h8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xy8_icRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xy8_isRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_xy8_i8RIEeWMv5rSwly7mg" name="neue Person anlegen" type="_o3p4csRIEeWMv5rSwly7mg" association="_xy8_h8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xy8_jMRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xy8_jcRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_yHivd8RIEeWMv5rSwly7mg" name="A_&lt;editieren>_&lt;personendaten ändern>" memberEnd="_yHiveMRIEeWMv5rSwly7mg _yHive8RIEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_yHiveMRIEeWMv5rSwly7mg" name="editieren" type="_ilaeUsRIEeWMv5rSwly7mg" association="_yHivd8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yHivecRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yHivesRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_yHive8RIEeWMv5rSwly7mg" name="personendaten ändern" type="_snr0gsRIEeWMv5rSwly7mg" association="_yHivd8RIEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yHivfMRIEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yHivfcRIEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_lGF14sRJEeWMv5rSwly7mg" name="Datenbank laden">
+      <extensionPoint xmi:id="_43SvgMRJEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pLOfR8RJEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;anmelden>" memberEnd="_pLOfSMRJEeWMv5rSwly7mg _pLOfS8RJEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_pLOfSMRJEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_pLOfR8RJEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pLOfScRJEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pLOfSsRJEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_pLOfS8RJEeWMv5rSwly7mg" name="anmelden" type="_c3y0MMRIEeWMv5rSwly7mg" association="_pLOfR8RJEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pLOfTMRJEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pLOfTcRJEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ulAAUsRJEeWMv5rSwly7mg" name="Datenbank speichern">
+      <extensionPoint xmi:id="_5XpqkMRJEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_A-36osRKEeWMv5rSwly7mg" name="Ausgabe">
+      <extend xmi:id="_SMHpxcRKEeWMv5rSwly7mg" name="Extend1" extendedCase="_FKaG8sRKEeWMv5rSwly7mg" extensionLocation="_SL94wMRKEeWMv5rSwly7mg"/>
+      <extend xmi:id="_To8NFcRKEeWMv5rSwly7mg" name="Extend2" extendedCase="_HvBYwMRKEeWMv5rSwly7mg" extensionLocation="_ToycEMRKEeWMv5rSwly7mg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_CtIzR8RKEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;ausgabe>" memberEnd="_CtIzSMRKEeWMv5rSwly7mg _CtIzS8RKEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_CtIzSMRKEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_CtIzR8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CtIzScRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CtIzSsRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_CtIzS8RKEeWMv5rSwly7mg" name="ausgabe" type="_A-36osRKEeWMv5rSwly7mg" association="_CtIzR8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CtIzTMRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CtIzTcRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_FKaG8sRKEeWMv5rSwly7mg" name="Stammbaum anzeigen">
+      <extensionPoint xmi:id="_SL94wMRKEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_HvBYwMRKEeWMv5rSwly7mg" name="Datensätze anzeigen">
+      <extensionPoint xmi:id="_ToycEMRKEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_OvOsJ8RKEeWMv5rSwly7mg" name="A_&lt;ausgabe>_&lt;graphisch>" memberEnd="_OvOsKMRKEeWMv5rSwly7mg _OvOsK8RKEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_OvOsKMRKEeWMv5rSwly7mg" name="ausgabe" type="_A-36osRKEeWMv5rSwly7mg" association="_OvOsJ8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OvOsKcRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OvOsKsRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_OvOsK8RKEeWMv5rSwly7mg" name="graphisch" type="_FKaG8sRKEeWMv5rSwly7mg" association="_OvOsJ8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OvOsLMRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OvOsLcRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_PO3Od8RKEeWMv5rSwly7mg" name="A_&lt;ausgabe>_&lt;datensätze als 'Tabelle>" memberEnd="_PO3OeMRKEeWMv5rSwly7mg _PO3Oe8RKEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_PO3OeMRKEeWMv5rSwly7mg" name="ausgabe" type="_A-36osRKEeWMv5rSwly7mg" association="_PO3Od8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PO3OecRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PO3OesRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_PO3Oe8RKEeWMv5rSwly7mg" name="datensätze als 'Tabelle" type="_HvBYwMRKEeWMv5rSwly7mg" association="_PO3Od8RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_PO3OfMRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_PO3OfcRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_bY5iYsRKEeWMv5rSwly7mg" name="Einstellungen">
+      <extend xmi:id="_j302hcRKEeWMv5rSwly7mg" name="Extend1" extendedCase="_guH6osRKEeWMv5rSwly7mg" extensionLocation="_j3rFgMRKEeWMv5rSwly7mg"/>
+      <extend xmi:id="_kX6ExcRKEeWMv5rSwly7mg" name="Extend2" extendedCase="_iBdx0sRKEeWMv5rSwly7mg" extensionLocation="_kXw60MRKEeWMv5rSwly7mg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_dcqJ58RKEeWMv5rSwly7mg" name="A_&lt;einstellungen>_&lt;benutzer>" memberEnd="_dcqJ6MRKEeWMv5rSwly7mg _dcqJ68RKEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_dcqJ6MRKEeWMv5rSwly7mg" name="einstellungen" type="_bY5iYsRKEeWMv5rSwly7mg" association="_dcqJ58RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dcqJ6cRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dcqJ6sRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_dcqJ68RKEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_dcqJ58RKEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dcqJ7MRKEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dcqJ7cRKEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_guH6osRKEeWMv5rSwly7mg" name="Sprache ändern">
+      <extensionPoint xmi:id="_j3rFgMRKEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_iBdx0sRKEeWMv5rSwly7mg" name="Schriftgröße ändern">
+      <extensionPoint xmi:id="_kXw60MRKEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_A1h78sRLEeWMv5rSwly7mg" name="Datenbank löschen">
+      <extensionPoint xmi:id="_MiTsIMRLEeWMv5rSwly7mg" name="ExtensionPoint1"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_brgf58RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;person löschen>" memberEnd="_brgf6MRLEeWMv5rSwly7mg _brgf68RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_brgf6MRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_brgf58RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_brgf6cRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_brgf6sRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_brgf68RLEeWMv5rSwly7mg" name="person löschen" type="_mLhCUsRIEeWMv5rSwly7mg" association="_brgf58RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_brgf7MRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_brgf7cRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cXT198RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;neue Person anlegen>" memberEnd="_cXT1-MRLEeWMv5rSwly7mg _cXT1-8RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_cXT1-MRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_cXT198RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cXT1-cRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cXT1-sRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_cXT1-8RLEeWMv5rSwly7mg" name="neue Person anlegen" type="_o3p4csRIEeWMv5rSwly7mg" association="_cXT198RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cXT1_MRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cXT1_cRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_cwoU58RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;personendaten ändern>" memberEnd="_cwoU6MRLEeWMv5rSwly7mg _cwoU68RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_cwoU6MRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_cwoU58RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cwoU6cRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cwoU6sRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_cwoU68RLEeWMv5rSwly7mg" name="personendaten ändern" type="_snr0gsRIEeWMv5rSwly7mg" association="_cwoU58RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_cwoU7MRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_cwoU7cRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_n8UKN8RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;graphische Ausgabe>" memberEnd="_n8UKOMRLEeWMv5rSwly7mg _n8UKO8RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_n8UKOMRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_n8UKN8RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n8UKOcRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n8UKOsRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_n8UKO8RLEeWMv5rSwly7mg" name="graphische Ausgabe" type="_FKaG8sRKEeWMv5rSwly7mg" association="_n8UKN8RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_n8UKPMRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_n8UKPcRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_obzil8RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;datensätze als Tabelle ausgeben>" memberEnd="_obzimMRLEeWMv5rSwly7mg _obzim8RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_obzimMRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_obzil8RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_obzimcRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_obzimsRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_obzim8RLEeWMv5rSwly7mg" name="datensätze als Tabelle ausgeben" type="_HvBYwMRKEeWMv5rSwly7mg" association="_obzil8RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_obzinMRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_obzincRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ox0158RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;sprache ändern>" memberEnd="_ox016MRLEeWMv5rSwly7mg _ox0168RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_ox016MRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_ox0158RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ox016cRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ox016sRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ox0168RLEeWMv5rSwly7mg" name="sprache ändern" type="_guH6osRKEeWMv5rSwly7mg" association="_ox0158RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ox017MRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ox017cRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_pMq-18RLEeWMv5rSwly7mg" name="A_&lt;benutzer>_&lt;fenstergröße ändern>" memberEnd="_pMq-2MRLEeWMv5rSwly7mg _pMq-28RLEeWMv5rSwly7mg">
+      <ownedEnd xmi:id="_pMq-2MRLEeWMv5rSwly7mg" name="benutzer" type="_Xka2EMRIEeWMv5rSwly7mg" association="_pMq-18RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pMq-2cRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pMq-2sRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_pMq-28RLEeWMv5rSwly7mg" name="fenstergröße ändern" type="_iBdx0sRKEeWMv5rSwly7mg" association="_pMq-18RLEeWMv5rSwly7mg">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pMq-3MRLEeWMv5rSwly7mg" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pMq-3cRLEeWMv5rSwly7mg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>

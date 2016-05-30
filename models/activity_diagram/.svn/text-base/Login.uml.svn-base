@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="idModel" name="LoginModel">
+  <packagedElement xmi:type="uml:Package" xmi:id="idPackage" name="LoginPackage">
+    <packagedElement xmi:type="uml:Activity" xmi:id="idActivity" name="LoginActivity">
+      <node xmi:type="uml:InitialNode" xmi:id="_T_2SMsQ_EeWYG97ikBbi2g" name="InitialNode1" outgoing="_zgyJasQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_UwS3ssQ_EeWYG97ikBbi2g" name="ActivityFinalNode1" incoming="_1SQHCMQ_EeWYG97ikBbi2g _1iXmqMQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_VfijUsQ_EeWYG97ikBbi2g" name="Anmelden-Button" outgoing="_z0AAWcQ_EeWYG97ikBbi2g" incoming="_zgyJasQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_W2K_EsQ_EeWYG97ikBbi2g" name="Anmeldeinformation eintragen" outgoing="_0W1nqcQ_EeWYG97ikBbi2g" incoming="_z0AAWcQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_crVbo8Q_EeWYG97ikBbi2g" name="Anmelden?" outgoing="_0n5ieMQ_EeWYG97ikBbi2g _04YOecQ_EeWYG97ikBbi2g" incoming="_0W1nqcQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_kMjKUsQ_EeWYG97ikBbi2g" name="Anmelden" outgoing="_1SQHCMQ_EeWYG97ikBbi2g" incoming="_0n5ieMQ_EeWYG97ikBbi2g"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_yi_rcsQ_EeWYG97ikBbi2g" name="Abbrechen" outgoing="_1iXmqMQ_EeWYG97ikBbi2g" incoming="_04YOecQ_EeWYG97ikBbi2g"/>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_zgyJasQ_EeWYG97ikBbi2g" name="ControlFlow1" source="_T_2SMsQ_EeWYG97ikBbi2g" target="_VfijUsQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_zgyJa8Q_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_zgyJbMQ_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_z0AAWcQ_EeWYG97ikBbi2g" name="ControlFlow2" source="_VfijUsQ_EeWYG97ikBbi2g" target="_W2K_EsQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_z0AAWsQ_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_z0AAW8Q_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_0W1nqcQ_EeWYG97ikBbi2g" name="ControlFlow3" source="_W2K_EsQ_EeWYG97ikBbi2g" target="_crVbo8Q_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_0W1nqsQ_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_0W1nq8Q_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_0n5ieMQ_EeWYG97ikBbi2g" name="ControlFlow4" source="_crVbo8Q_EeWYG97ikBbi2g" target="_kMjKUsQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_0n5iecQ_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_0n5iesQ_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_04YOecQ_EeWYG97ikBbi2g" name="ControlFlow5" source="_crVbo8Q_EeWYG97ikBbi2g" target="_yi_rcsQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_04YOesQ_EeWYG97ikBbi2g"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_04YOe8Q_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_1SQHCMQ_EeWYG97ikBbi2g" name="ControlFlow6" source="_kMjKUsQ_EeWYG97ikBbi2g" target="_UwS3ssQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_1SQHCcQ_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_1SQHCsQ_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_1iXmqMQ_EeWYG97ikBbi2g" name="ControlFlow7" source="_yi_rcsQ_EeWYG97ikBbi2g" target="_UwS3ssQ_EeWYG97ikBbi2g">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_1iXmqcQ_EeWYG97ikBbi2g" value="true"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_1iXmqsQ_EeWYG97ikBbi2g" value="1"/>
+      </edge>
+    </packagedElement>
+  </packagedElement>
+</uml:Model>
