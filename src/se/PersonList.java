@@ -26,7 +26,7 @@ public class PersonList {
 	public PersonList(Person[] list, int quantity) {
 		this.list = list;
 		this.quantity = quantity;
-		for (int i = 0; i < list.length; i++) {
+		for (int i = 0; i < quantity; i++) {
 			list[i].setId(i);
 		}
 	}
