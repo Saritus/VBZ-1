@@ -27,10 +27,12 @@ public class RSViewer extends JPanel {
 	public PersonList personlist;
 	private Person selected;
 
-	public RSViewer() {
-		this(new PersonList());
-	}
-
+	/**
+	 * Constructor for a new RSViewer panel
+	 * 
+	 * @param pl
+	 *            list with information of persons
+	 */
 	public RSViewer(PersonList pl) {
 		super();
 		Container cp = this;
@@ -97,6 +99,9 @@ public class RSViewer extends JPanel {
 		}
 	}
 
+	/**
+	 * Update the lists with the new correct informations from the personlist
+	 */
 	public void updateList() {
 		jList1Model.clear();
 		String[] infos = personlist.getStringList();
@@ -105,15 +110,32 @@ public class RSViewer extends JPanel {
 		}
 	}
 
+	/**
+	 * Dunno myself TODO: WHY?
+	 * 
+	 * @return a rnd number (rolled a dice)
+	 */
 	public int drawBasic() {
 		return 3;
 	}
 
+	/**
+	 * Changes the language of the text on the buttons
+	 * 
+	 * @param l
+	 *            object with language information
+	 */
 	public void setLang(Language l) {
 		savebutton.setText(l.SPEICHERN);
 		selectbutton.setText(l.AUSWÄHLEN);
 	}
 
+	/**
+	 * Changes the size of the text on the buttons and the list
+	 * 
+	 * @param size
+	 *            value of the size for the text
+	 */
 	public void setSize(int size) {
 		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
 		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));

@@ -23,6 +23,11 @@ public class Settings extends JPanel {
 	public Main mainw;
 	private JButton acceptbutton = new JButton();
 
+	/**
+	 * 
+	 * @param m
+	 *            main window of the program
+	 */
 	public Settings(Main m) {
 		super();
 		Container cp = this;
@@ -71,6 +76,10 @@ public class Settings extends JPanel {
 		setVisible(true);
 	}
 
+	/**
+	 * 
+	 * @return text of the selected radio button
+	 */
 	public String buttonGroup1_getSelectedRadioButtonLabel() {
 		for (java.util.Enumeration<AbstractButton> e = buttonGroup1.getElements(); e.hasMoreElements();) {
 			AbstractButton b = e.nextElement();
@@ -80,6 +89,12 @@ public class Settings extends JPanel {
 		return "";
 	}
 
+	/**
+	 * Sets the language for all panles
+	 * 
+	 * @param lang
+	 *            object with language information
+	 */
 	public void setLang(String lang) {
 		Language l;
 		switch (lang) {
@@ -99,6 +114,12 @@ public class Settings extends JPanel {
 		mainw.setLang(l);
 	}
 
+	/**
+	 * Sets the font of all buttons and labels of all panels
+	 * 
+	 * @param size
+	 *            font size
+	 */
 	public void setSize(int size) {
 		acceptbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		textsizelabel.setFont(new Font("Dialog", Font.BOLD, size));
@@ -109,7 +130,7 @@ public class Settings extends JPanel {
 		mainw.setSize(size);
 	}
 
-	public void jButton1_ActionPerformed(ActionEvent evt) {
+	private void jButton1_ActionPerformed(ActionEvent evt) {
 		String selectedButton = buttonGroup1_getSelectedRadioButtonLabel();
 		setLang(selectedButton);
 		int selectedSize = jSlider1.getValue();

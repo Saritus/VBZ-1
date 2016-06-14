@@ -25,10 +25,12 @@ public class PersonTable extends JPanel {
 	private JButton printbutton = new JButton();
 	public PersonList personlist;
 
-	public PersonTable() {
-		this(new PersonList());
-	}
-
+	/**
+	 * Constructor for a new PersonTable panel
+	 * 
+	 * @param pl
+	 *            list with information about persons
+	 */
 	public PersonTable(PersonList pl) {
 		super();
 		Container cp = this;
@@ -110,6 +112,9 @@ public class PersonTable extends JPanel {
 		}
 	}
 
+	/**
+	 * Update the table with the new correct informations from the personlist
+	 */
 	public void updateTable() {
 		for (int i = jTable1Model.getRowCount() - 1; i >= 0; i--) {
 			jTable1Model.removeRow(i);
@@ -119,6 +124,13 @@ public class PersonTable extends JPanel {
 		}
 	}
 
+	/**
+	 * Changes the language of the text on the buttons and the headers of the
+	 * table
+	 * 
+	 * @param l
+	 *            object with language information
+	 */
 	public void setLang(Language l) {
 		savebutton.setText(l.SPEICHERN);
 		printbutton.setText(l.DRUCKEN);
@@ -130,11 +142,16 @@ public class PersonTable extends JPanel {
 		jTable1.getColumnModel().getColumn(5).setHeaderValue(l.EHEPARTNER);
 	}
 
+	/**
+	 * Changes the size of the text on the buttons and the table
+	 * 
+	 * @param size
+	 *            value of the size for the text
+	 */
 	public void setSize(int size) {
 		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
 		printbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		jTable1.setFont(new Font("Dialog", Font.PLAIN, size));
 		jTable1.getTableHeader().setFont(new Font("Dialog", Font.PLAIN, size));
-
 	}
 }

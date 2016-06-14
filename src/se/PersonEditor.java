@@ -223,6 +223,12 @@ public class PersonEditor extends JPanel {
 		}
 	}
 
+	/**
+	 * Changes the size of the text on the buttons and the labels
+	 * 
+	 * @param size
+	 *            value of the size for the text
+	 */
 	public void setSize(int size) {
 		acceptbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));
@@ -240,6 +246,12 @@ public class PersonEditor extends JPanel {
 		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
+	/**
+	 * Changes the language of the text on the labels
+	 * 
+	 * @param l
+	 *            object with language information
+	 */
 	public void setLang(Language l) {
 		acceptbutton.setText(l.ÜBERNEHMEN);
 		selectbutton.setText(l.AUSWÄHLEN);
