@@ -1,16 +1,18 @@
 package se;
 
 /**
-*
-* Beschreibung
-*
-* @version 1.0 vom 28.01.2016
-* @author Sebastian Mischke
-*/
+ *
+ * Beschreibung
+ *
+ * @version 1.0 vom 28.01.2016
+ * @author Sebastian Mischke
+ */
 
 public class LanguageDE extends Language {
 
-	// Konstruktor
+	/**
+	 * Creates a new text object for german labels
+	 */
 	public LanguageDE() {
 		// Buttons
 		SPEICHERN = "Speichern";
