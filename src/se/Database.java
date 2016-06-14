@@ -5,6 +5,14 @@ import java.sql.*;
 import javax.swing.DefaultListModel;
 import javax.swing.JProgressBar;
 
+/**
+*
+* Beschreibung
+*
+* @version 1.0 vom 28.01.2016
+* @author Sebastian Mischke
+*/
+
 public class Database {
 
 	private final String hostname = "sql7.freemysqlhosting.net";
@@ -78,11 +86,6 @@ public class Database {
 				int motherid = rs.getInt(7);
 				int spouseid = rs.getInt(8);
 
-				/*
-				 * System.out.println(id + " " + firstname + " " + lastname +
-				 * " " + gender + " " + birthday + " " + fatherid + " " +
-				 * motherid + " " + spouseid);
-				 */
 				Person p = new Person(id, lastname, firstname, gender,
 						birthday, fatherid, motherid, spouseid);
 				pl.addPerson(p);

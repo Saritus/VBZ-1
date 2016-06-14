@@ -1,27 +1,35 @@
 package se;
 
+/**
+*
+* Beschreibung
+*
+* @version 1.0 vom 28.01.2016
+* @author Sebastian Mischke
+*/
+
 public abstract class Language {
 	// Buttons
-	public static String SPEICHERN;
-	public static String AUSWÄHLEN;
-	public static String NEU;
-	public static String ÜBERNEHMEN;
-	public static String LÖSCHEN;
-	public static String DRUCKEN;
-	public static String LADEN;
+	public String SPEICHERN;
+	public String AUSWÄHLEN;
+	public String NEU;
+	public String ÜBERNEHMEN;
+	public String LÖSCHEN;
+	public String DRUCKEN;
+	public String LADEN;
 
 	// Attributes
-	public static String NACHNAME;
-	public static String VORNAME;
-	public static String GEBURTSDATUM;
-	public static String GESCHLECHT;
-	public static String VATER;
-	public static String MUTTER;
-	public static String EHEPARTNER;
+	public String NACHNAME;
+	public String VORNAME;
+	public String GEBURTSDATUM;
+	public String GESCHLECHT;
+	public String VATER;
+	public String MUTTER;
+	public String EHEPARTNER;
 
 	// Labels
-	public static String TEXTGRÖSSE;
-	public static String SPRACHE;
+	public String TEXTGRÖSSE;
+	public String SPRACHE;
 
 	// Errors
 

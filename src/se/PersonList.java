@@ -12,13 +12,9 @@ import java.text.*;
 
 public class PersonList {
 
-	// Anfang Attribute
 	private Person[] list;
 	private int quantity;
 
-	// Ende Attribute
-
-	// Anfang Methoden
 	public PersonList(Person[] list, int quantity) {
 		this.list = list;
 		this.quantity = quantity;
@@ -54,7 +50,6 @@ public class PersonList {
 	public Person getPerson(int id) {
 		// TODO: search and return Person with id, if not found, return null
 		return list[id];
-		// return null;
 	}
 
 	public String[] getPersonInfo(int id) {
@@ -90,7 +85,7 @@ public class PersonList {
 		Person[] plist = new Person[quantity + 1];
 		for (int i = 0; i < quantity; i++) {
 			plist[i] = list[i];
-		} // end of for
+		}
 		plist[quantity] = add;
 		quantity++;
 		list = plist;
@@ -145,7 +140,7 @@ public class PersonList {
 			stringlist[i] = i + ". " + list[i].getVorname() + " "
 					+ list[i].getNachname() + " (" + list[i].getGeschlecht()
 					+ ")";
-		} // end of for
+		}
 		return stringlist;
 	}
 
@@ -153,5 +148,4 @@ public class PersonList {
 		list = new Person[0];
 		quantity = 0;
 	}
-	// Ende Methoden
-} // end of PersonList
+}

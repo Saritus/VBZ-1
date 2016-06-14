@@ -18,7 +18,6 @@ import javax.imageio.*;
  */
 
 public class RSViewer extends JPanel {
-	// Anfang Attribute
 	public MyCanvas canvas;
 	private JList jList1 = new JList();
 	private DefaultListModel jList1Model = new DefaultListModel();
@@ -28,19 +27,16 @@ public class RSViewer extends JPanel {
 	public PersonList personlist;
 	private Person selected;
 
-	// Ende Attribute
-
 	public RSViewer() {
 		this(new PersonList());
 	}
 
 	public RSViewer(PersonList pl) {
-		// Frame-Initialisierung
 		super();
 		Container cp = this;
 		cp.setLayout(null);
 		personlist = pl;
-		// Anfang Komponenten
+
 		canvas = new MyCanvas();
 		canvas.setBounds(13, 13, 521, 434);
 		canvas.setBackground(Color.WHITE);
@@ -50,12 +46,10 @@ public class RSViewer extends JPanel {
 		jList1.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent evt) {
 				if (evt.getClickCount() == 2) {
-
 					// Double-click detected
 					int index = jList1.locationToIndex(evt.getPoint());
 					System.out.println(index + "");
 				} else if (evt.getClickCount() == 3) {
-
 					// Triple-click detected
 					int index = jList1.locationToIndex(evt.getPoint());
 					System.out.println(index + "");
@@ -81,27 +75,27 @@ public class RSViewer extends JPanel {
 			}
 		});
 		cp.add(selectbutton);
-		// Ende Komponenten
+
 		updateList();
 		drawBasic();
 		setVisible(true);
-	} // end of public RSViewer
+	}
 
-	public void saveicon_ActionPerformed(ActionEvent evt) {
+	private void saveicon_ActionPerformed(ActionEvent evt) {
 		JFileChooser fileChooser = new JFileChooser();
 		if (fileChooser.showSaveDialog(fileChooser) == JFileChooser.APPROVE_OPTION) {
 			File file = fileChooser.getSelectedFile();
 			canvas.save(file);
 		}
-	} // end of saveicon_ActionPerformed
+	}
 
-	public void selectbutton_ActionPerformed(ActionEvent evt) {
+	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
 			System.out.println(jList1.getSelectedIndex());
 			selected = personlist.getList()[jList1.getSelectedIndex()];
 			System.out.println(selected.getName());
 		}
-	} // end of selectbutton_ActionPerformed
+	}
 
 	public void updateList() {
 		jList1Model.clear();
@@ -125,6 +119,4 @@ public class RSViewer extends JPanel {
 		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
-
-	// Ende Methoden
-} // end of class RSViewer
+}

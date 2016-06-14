@@ -18,28 +18,22 @@ import java.awt.print.*;
  */
 
 public class PersonTable extends JPanel {
-	// Anfang Attribute
 	private JTable jTable1 = new JTable(30, 6);
-	private DefaultTableModel jTable1Model = (DefaultTableModel) jTable1
-			.getModel();
+	private DefaultTableModel jTable1Model = (DefaultTableModel) jTable1.getModel();
 	private JScrollPane jTable1ScrollPane = new JScrollPane(jTable1);
 	private JButton savebutton = new JButton();
 	private JButton printbutton = new JButton();
 	public PersonList personlist;
-
-	// Ende Attribute
 
 	public PersonTable() {
 		this(new PersonList());
 	}
 
 	public PersonTable(PersonList pl) {
-		// Frame-Initialisierung
 		super();
 		Container cp = this;
 		cp.setLayout(null);
 		personlist = pl;
-		// Anfang Komponenten
 
 		jTable1ScrollPane.setBounds(13, 13, 768, 435);
 		jTable1.setDragEnabled(false);
@@ -70,21 +64,19 @@ public class PersonTable extends JPanel {
 			}
 		});
 		cp.add(printbutton);
-		// Ende Komponenten
+
 		updateTable();
 		setVisible(true);
-	} // end of public PersonTable
+	}
 
-	// Anfang Methoden
-	public void jButton1_ActionPerformed(ActionEvent evt) {
+	private void jButton1_ActionPerformed(ActionEvent evt) {
 		JFileChooser fileChooser = new JFileChooser();
 		if (fileChooser.showSaveDialog(fileChooser) == JFileChooser.APPROVE_OPTION) {
 			try {
 				File file = fileChooser.getSelectedFile();
 				PrintWriter os = new PrintWriter(file);
 				for (int col = 0; col < jTable1.getColumnCount(); col++) {
-					os.format("%-20s", jTable1.getColumnModel().getColumn(col)
-							.getHeaderValue());
+					os.format("%-20s", jTable1.getColumnModel().getColumn(col).getHeaderValue());
 				}
 
 				os.println("");
@@ -103,9 +95,9 @@ public class PersonTable extends JPanel {
 				e.printStackTrace();
 			}
 		}
-	} // end of jButton1_ActionPerformed
+	}
 
-	public void jButton2_ActionPerformed(ActionEvent evt) {
+	private void jButton2_ActionPerformed(ActionEvent evt) {
 
 		PrinterJob pj = PrinterJob.getPrinterJob();
 		PageFormat pf = pj.pageDialog(pj.defaultPage());
@@ -116,8 +108,7 @@ public class PersonTable extends JPanel {
 				System.out.println(exc);
 			}
 		}
-
-	} // end of jButton2_ActionPerformed
+	}
 
 	public void updateTable() {
 		for (int i = jTable1Model.getRowCount() - 1; i >= 0; i--) {
@@ -125,10 +116,8 @@ public class PersonTable extends JPanel {
 		}
 		for (int i = 0; i < personlist.getQuantity(); i++) {
 			jTable1Model.addRow(personlist.getPersonInfo(i));
-		} // end of for
-
-		// Ende Methoden
-	} // end of class PersonTable
+		}
+	}
 
 	public void setLang(Language l) {
 		savebutton.setText(l.SPEICHERN);
@@ -144,6 +133,8 @@ public class PersonTable extends JPanel {
 	public void setSize(int size) {
 		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
 		printbutton.setFont(new Font("Dialog", Font.BOLD, size));
-		jTable1.setFont(new Font("Dialog", Font.BOLD, size));
+		jTable1.setFont(new Font("Dialog", Font.PLAIN, size));
+		jTable1.getTableHeader().setFont(new Font("Dialog", Font.PLAIN, size));
+
 	}
 }

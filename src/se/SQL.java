@@ -14,7 +14,6 @@ import javax.swing.event.*;
  */
 
 public class SQL extends JPanel {
-	// Anfang Attribute
 	private JList jList1 = new JList();
 	private DefaultListModel jList1Model = new DefaultListModel();
 	private JScrollPane jList1ScrollPane = new JScrollPane(jList1);
@@ -26,21 +25,17 @@ public class SQL extends JPanel {
 	private JTextField jTextField1 = new JTextField();
 	public Main main;
 
-	// Ende Attribute
-
 	public SQL() {
 		this(new PersonList(), new Database(), new Main());
 	}
 
 	public SQL(PersonList pl, Database db, Main m) {
-		// Frame-Initialisierung
 		super();
 		Container cp = this;
 		cp.setLayout(null);
 		personlist = pl;
 		database = db;
 		main = m;
-		// Anfang Komponenten
 
 		jList1.setModel(jList1Model);
 		jList1ScrollPane.setBounds(13, 13, 235, 442);
@@ -84,32 +79,29 @@ public class SQL extends JPanel {
 		jTextField1.setBounds(13, 464, 235, 25);
 		cp.add(jTextField1);
 		fillDatabaseList();
-		// Ende Komponenten
 
 		setVisible(true);
-	} // end of public Database
+	}
 
-	// Anfang Methoden
-
-	public void savebutton_ActionPerformed(ActionEvent evt) {
+	private void savebutton_ActionPerformed(ActionEvent evt) {
 		personlist.fillPersonInfo();
 		database.save(jTextField1.getText(), personlist);
 		fillDatabaseList();
-	} // end of savebutton_ActionPerformed
+	}
 
-	public void loadbutton_ActionPerformed(ActionEvent evt) {
+	private void loadbutton_ActionPerformed(ActionEvent evt) {
 		personlist.clear();
 		database.load(jTextField1.getText(), personlist);
 		personlist.fillPersonInfo();
 		main.updatePanels();
-	} // end of loadbutton_ActionPerformed
+	}
 
-	public void deletebutton_ActionPerformed(ActionEvent evt) {
+	private void deletebutton_ActionPerformed(ActionEvent evt) {
 		int i = jList1.getSelectedIndex();
 		database.delete(jTextField1.getText());
 		fillDatabaseList();
 		jList1.setSelectedIndex(i);
-	} // end of deletebutton_ActionPerformed
+	}
 
 	public void setLang(Language l) {
 		savebutton.setText(l.SPEICHERN);
@@ -127,5 +119,4 @@ public class SQL extends JPanel {
 	public void fillDatabaseList() {
 		database.getTables(jList1Model);
 	}
-	// Ende Methoden
-} // end of class Database
+}

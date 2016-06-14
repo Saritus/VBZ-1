@@ -14,7 +14,6 @@ import javax.swing.event.*;
  */
 
 public class Settings extends JPanel {
-	// Anfang Attribute
 	private JRadioButton deutschrb = new JRadioButton();
 	private JRadioButton englishrb = new JRadioButton();
 	private ButtonGroup buttonGroup1 = new ButtonGroup();
@@ -24,19 +23,12 @@ public class Settings extends JPanel {
 	public Main mainw;
 	private JButton acceptbutton = new JButton();
 
-	// Ende Attribute
-
-	public Settings() {
-		this(new Main());
-	}
-
 	public Settings(Main m) {
-		// Frame-Initialisierung
 		super();
 		Container cp = this;
 		cp.setLayout(null);
 		mainw = m;
-		// Anfang Komponenten
+
 		deutschrb.setBounds(346, 120, 100, 25);
 		deutschrb.setText("Deutsch");
 		deutschrb.setOpaque(false);
@@ -48,7 +40,7 @@ public class Settings extends JPanel {
 		buttonGroup1.add(englishrb);
 		deutschrb.setSelected(true);
 		cp.add(englishrb);
-		jSlider1.setBounds(253, 232, 300, 50);
+		jSlider1.setBounds(253, 232, 300, 60);
 		jSlider1.setMinorTickSpacing(1);
 		jSlider1.setMajorTickSpacing(1);
 		jSlider1.setPaintTicks(true);
@@ -56,6 +48,7 @@ public class Settings extends JPanel {
 		jSlider1.setSnapToTicks(true);
 		jSlider1.setMaximum(3);
 		jSlider1.setMinimum(1);
+		jSlider1.setValue(1);
 		cp.add(jSlider1);
 		textsizelabel.setBounds(253, 208, 300, 25);
 		textsizelabel.setText("Textgröße");
@@ -74,12 +67,10 @@ public class Settings extends JPanel {
 			}
 		});
 		cp.add(acceptbutton);
-		// Ende Komponenten
 
 		setVisible(true);
-	} // end of public Settings
+	}
 
-	// Anfang Methoden
 	public String buttonGroup1_getSelectedRadioButtonLabel() {
 		for (java.util.Enumeration<AbstractButton> e = buttonGroup1.getElements(); e.hasMoreElements();) {
 			AbstractButton b = e.nextElement();
@@ -114,6 +105,7 @@ public class Settings extends JPanel {
 		languagelabel.setFont(new Font("Dialog", Font.BOLD, size));
 		deutschrb.setFont(new Font("Dialog", Font.BOLD, size));
 		englishrb.setFont(new Font("Dialog", Font.BOLD, size));
+		jSlider1.setFont(new Font("Dialog", Font.BOLD, size));
 		mainw.setSize(size);
 	}
 
@@ -122,6 +114,5 @@ public class Settings extends JPanel {
 		setLang(selectedButton);
 		int selectedSize = jSlider1.getValue();
 		setSize(9 + 3 * selectedSize);
-	} // end
-
-} // end of class Settings
+	}
+}

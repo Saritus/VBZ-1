@@ -1,5 +1,13 @@
 package se;
 
+/**
+*
+* Beschreibung
+*
+* @version 1.0 vom 28.01.2016
+* @author Sebastian Mischke
+*/
+
 public class LanguageEN extends Language {
 
 	// Konstruktor

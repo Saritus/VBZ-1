@@ -6,12 +6,12 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.*;
 
-/*
+/**
  *
  * Beschreibung
  *
  * @version 1.0 vom 28.01.2016
- * @author Sebastian Mischke 
+ * @author Sebastian Mischke
  */
 
 public class Main extends JPanel {
@@ -33,7 +33,7 @@ public class Main extends JPanel {
 
 		JTabbedPane tabbedPane = new JTabbedPane();
 
-		personlist = new PersonList(); // createExamplePersonList();
+		personlist = new PersonList();
 		database = new Database();
 
 		settings = new Settings(this);
@@ -58,12 +58,10 @@ public class Main extends JPanel {
 
 		sql.setPreferredSize(new Dimension(783, 490));
 
-		// Add the tabbed pane to this panel.
 		add(tabbedPane);
 
-		// The following line enables to use scrolling tabs.
 		tabbedPane.setTabLayoutPolicy(JTabbedPane.SCROLL_TAB_LAYOUT);
-		tabbedPane.setTabPlacement(JTabbedPane.TOP); // LEFT
+		tabbedPane.setTabPlacement(JTabbedPane.TOP);
 	}
 
 	protected JComponent makeTextPanel(String text) {
@@ -117,14 +115,12 @@ public class Main extends JPanel {
 		Person hh = new Person("Hesse", "Hermann", 'm');
 		Person fs = new Person("Schiller", "Friedrich", 'm');
 		Person ow = new Person("Wilde", "Oscar", 'm');
-		Person[] parray = { eins, zwei, drei, al, ws, jg, ja, jt, fk, cd, ek,
-				hh, fs, ow };
+		Person[] parray = { eins, zwei, drei, al, ws, jg, ja, jt, fk, cd, ek, hh, fs, ow };
 		PersonList plist = new PersonList(parray);
 		return plist;
 	}
 
 	public void setLang(Language l) {
-		// TODO: Setze neue Sprache
 		lang = l;
 		rsviewer.setLang(l);
 		sql.setLang(l);
@@ -133,7 +129,6 @@ public class Main extends JPanel {
 	}
 
 	public void setSize(int size) {
-		// TODO: Größe der Buttons prüfen - "Überneh..."
 		rsviewer.setSize(size);
 		sql.setSize(size);
 		personeditor.setSize(size);

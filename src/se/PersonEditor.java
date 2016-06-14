@@ -6,16 +6,14 @@ import javax.swing.*;
 import javax.swing.event.*;
 import javax.swing.text.*;
 
-/*
+/**
  *
  * Editor für Personen
  *
+ * @author Sebastian Mischke
  * @version 1.0 vom 21.01.2016
- * @author Sebastian Mischke                                                        
  */
-
 public class PersonEditor extends JPanel {
-	// Anfang Attribute
 	private JLabel lnamelabel = new JLabel();
 	private JLabel fnamelabel = new JLabel();
 	private JLabel genderlabel = new JLabel();
@@ -47,27 +45,24 @@ public class PersonEditor extends JPanel {
 	private JLabel fatherlabel1 = new JLabel();
 	private JLabel motherlabel1 = new JLabel();
 	private JLabel spouselabel1 = new JLabel();
-	private JFormattedTextField gebdattf = new JFormattedTextField(
-			createFormatter("##.##.####"));
+	private JFormattedTextField gebdattf = new JFormattedTextField(createFormatter("##.##.####"));
 	public Main mainw;
 	public PersonList personlist;
 	private Person selected;
 
-	// Ende Attribute
-
-	public PersonEditor() {
-		this(new PersonList(), null);
-	}
-
+	/**
+	 * @param pl
+	 *            the personlist with all the data for the program
+	 * @param m
+	 *            the main window of the program
+	 */
 	public PersonEditor(PersonList pl, Main m) {
-		// Frame-Initialisierung
 		super();
 		Container cp = this;
 		cp.setLayout(null);
 		personlist = pl;
 		mainw = m;
 		selected = new Person("", "");
-		// Anfang Komponenten
 
 		lnamelabel.setBounds(13, 13, 150, 25);
 		lnamelabel.setText("Nachname");
@@ -81,7 +76,7 @@ public class PersonEditor extends JPanel {
 		bdaylabel.setBounds(13, 105, 150, 25);
 		bdaylabel.setText("Geburtsdatum");
 		cp.add(bdaylabel);
-		newbutton.setBounds(13, 460, 95, 25);
+		newbutton.setBounds(13, 460, 135, 25);
 		newbutton.setText("Neu");
 		newbutton.setMargin(new Insets(2, 2, 2, 2));
 		cp.add(newbutton);
@@ -113,7 +108,7 @@ public class PersonEditor extends JPanel {
 		spousebox.setModel(jComboBox4Model);
 		spousebox.setBounds(163, 289, 150, 25);
 		cp.add(spousebox);
-		acceptbutton.setBounds(126, 460, 95, 25);
+		acceptbutton.setBounds(166, 460, 135, 25);
 		acceptbutton.setText("Übernehmen");
 		acceptbutton.setMargin(new Insets(2, 2, 2, 2));
 		acceptbutton.addActionListener(new ActionListener() {
@@ -122,7 +117,7 @@ public class PersonEditor extends JPanel {
 			}
 		});
 		cp.add(acceptbutton);
-		cancelbutton.setBounds(240, 460, 95, 25);
+		cancelbutton.setBounds(320, 460, 135, 25);
 		cancelbutton.setText("Löschen");
 		cancelbutton.setMargin(new Insets(2, 2, 2, 2));
 		cancelbutton.addActionListener(new ActionListener() {
@@ -182,17 +177,16 @@ public class PersonEditor extends JPanel {
 		gebdattf.setBounds(163, 105, 150, 25);
 		gebdattf.setText("01.01.1990");
 		cp.add(gebdattf);
-		// Ende Komponenten
 
 		updateList();
 		setVisible(true);
-	} // end of public PersonEditor
+	}
 
-	public void cancelbutton_ActionPerformed(ActionEvent evt) {
-		// TODO hier Quelltext einfügen
-	} // end of cancelbutton_ActionPerformed
+	private void cancelbutton_ActionPerformed(ActionEvent evt) {
+		// TODO Ausgewählte Person löschen
+	}
 
-	public void selectbutton_ActionPerformed(ActionEvent evt) {
+	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
 			System.out.println(jList1.getSelectedIndex());
 			selected = personlist.getList()[jList1.getSelectedIndex()];
@@ -201,15 +195,16 @@ public class PersonEditor extends JPanel {
 		lnametf.setText(selected.getNachname());
 		fnametf.setText(selected.getVorname());
 		// gebdattf.setText(selected.getGebdat());
-	} // end of selectbutton_ActionPerformed
+		// TODO: Alle Informationen der Person in die Felder eintragen
+	}
 
-	public void acceptbutton_ActionPerformed(ActionEvent evt) {
+	private void acceptbutton_ActionPerformed(ActionEvent evt) {
 		selected.setNachname(lnametf.getText());
 		selected.setVorname(fnametf.getText());
-		
+
 		mainw.updatePanels();
 
-	} // end of selectbutton_ActionPerformed
+	}
 
 	protected MaskFormatter createFormatter(String s) {
 		MaskFormatter formatter = null;
@@ -229,7 +224,6 @@ public class PersonEditor extends JPanel {
 	}
 
 	public void setSize(int size) {
-		
 		acceptbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));
 		newbutton.setFont(new Font("Dialog", Font.BOLD, size));
@@ -242,6 +236,8 @@ public class PersonEditor extends JPanel {
 		fatherlabel.setFont(new Font("Dialog", Font.BOLD, size));
 		motherlabel.setFont(new Font("Dialog", Font.BOLD, size));
 		spouselabel.setFont(new Font("Dialog", Font.BOLD, size));
+
+		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
 	public void setLang(Language l) {
@@ -258,5 +254,4 @@ public class PersonEditor extends JPanel {
 		motherlabel.setText(l.MUTTER);
 		spouselabel.setText(l.EHEPARTNER);
 	}
-
-} // end of class PersonEditor
+}

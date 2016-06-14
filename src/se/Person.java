@@ -1,18 +1,17 @@
 package se;
 
-/*
- *
- * Beschreibung
- *
- * @version 1.0 vom 24.03.2016
- * @author Sebastian Mischke
- */
-
 import java.util.*;
+
+/**
+*
+* Beschreibung
+*
+* @version 1.0 vom 28.01.2016
+* @author Sebastian Mischke
+*/
 
 public class Person {
 
-	// Anfang Attribute
 	private int id;
 	private String nachname;
 	private String vorname;
@@ -25,11 +24,8 @@ public class Person {
 	private Person ehepartner;
 	private int ehepartnerid;
 
-	// Ende Attribute
-
-	public Person(int id, String nachname, String vorname, char geschlecht,
-			MyDate gebdat, Person vater, int vaterid, Person mutter,
-			int mutterid, Person ehepartner, int ehepartnerid) {
+	public Person(int id, String nachname, String vorname, char geschlecht, MyDate gebdat, Person vater, int vaterid,
+			Person mutter, int mutterid, Person ehepartner, int ehepartnerid) {
 		this.id = id;
 		this.nachname = nachname;
 		this.vorname = vorname;
@@ -43,61 +39,48 @@ public class Person {
 		this.ehepartnerid = ehepartnerid;
 	}
 
-	public Person(int id, String nachname, String vorname, char geschlecht,
-			MyDate gebdat, int vaterid, int mutterid, int ehepartnerid) {
-		this(id, nachname, vorname, geschlecht, gebdat, null, vaterid, null,
-				mutterid, null, ehepartnerid);
+	public Person(int id, String nachname, String vorname, char geschlecht, MyDate gebdat, int vaterid, int mutterid,
+			int ehepartnerid) {
+		this(id, nachname, vorname, geschlecht, gebdat, null, vaterid, null, mutterid, null, ehepartnerid);
 	}
 
-	public Person(int id, String nachname, String vorname, char geschlecht,
-			MyDate gebdat, int vaterid, int mutterid) {
-		this(id, nachname, vorname, geschlecht, gebdat, null, vaterid, null,
-				mutterid, null, -1);
+	public Person(int id, String nachname, String vorname, char geschlecht, MyDate gebdat, int vaterid, int mutterid) {
+		this(id, nachname, vorname, geschlecht, gebdat, null, vaterid, null, mutterid, null, -1);
 	}
 
-	public Person(int id, String nachname, String vorname, char geschlecht,
-			MyDate gebdat) {
-		this(id, nachname, vorname, geschlecht, gebdat, null, -1, null, -1,
-				null, -1);
+	public Person(int id, String nachname, String vorname, char geschlecht, MyDate gebdat) {
+		this(id, nachname, vorname, geschlecht, gebdat, null, -1, null, -1, null, -1);
 	}
 
 	public Person(int id, String nachname, String vorname, char geschlecht) {
-		this(id, nachname, vorname, geschlecht, null, null, -1, null, -1, null,
-				-1);
+		this(id, nachname, vorname, geschlecht, null, null, -1, null, -1, null, -1);
 	}
 
 	public Person(int id, String nachname, String vorname) {
 		this(id, nachname, vorname, 'u', null, null, -1, null, -1, null, -1);
 	}
 
-	public Person(String nachname, String vorname, char geschlecht,
-			MyDate gebdat, int vaterid, int mutterid, int ehepartnerid) {
-		this(-1, nachname, vorname, geschlecht, gebdat, null, vaterid, null,
-				mutterid, null, ehepartnerid);
+	public Person(String nachname, String vorname, char geschlecht, MyDate gebdat, int vaterid, int mutterid,
+			int ehepartnerid) {
+		this(-1, nachname, vorname, geschlecht, gebdat, null, vaterid, null, mutterid, null, ehepartnerid);
 	}
 
-	public Person(String nachname, String vorname, char geschlecht,
-			MyDate gebdat, int vaterid, int mutterid) {
-		this(-1, nachname, vorname, geschlecht, gebdat, null, vaterid, null,
-				mutterid, null, -1);
+	public Person(String nachname, String vorname, char geschlecht, MyDate gebdat, int vaterid, int mutterid) {
+		this(-1, nachname, vorname, geschlecht, gebdat, null, vaterid, null, mutterid, null, -1);
 	}
 
-	public Person(String nachname, String vorname, char geschlecht,
-			MyDate gebdat) {
-		this(-1, nachname, vorname, geschlecht, gebdat, null, -1, null, -1,
-				null, -1);
+	public Person(String nachname, String vorname, char geschlecht, MyDate gebdat) {
+		this(-1, nachname, vorname, geschlecht, gebdat, null, -1, null, -1, null, -1);
 	}
 
 	public Person(String nachname, String vorname, char geschlecht) {
-		this(-1, nachname, vorname, geschlecht, null, null, -1, null, -1, null,
-				-1);
+		this(-1, nachname, vorname, geschlecht, null, null, -1, null, -1, null, -1);
 	}
 
 	public Person(String nachname, String vorname) {
 		this(-1, nachname, vorname, 'u', null, null, -1, null, -1, null, -1);
 	}
 
-	// Anfang Methoden
 	public String getName() {
 		return vorname + " " + nachname;
 	}
@@ -121,9 +104,9 @@ public class Person {
 	public MyDate getGebdat() {
 		return gebdat;
 	}
-	
+
 	public String getGebdatString() {
-		if(gebdat==null) {
+		if (gebdat == null) {
 			return "null";
 		}
 		return "\'" + this.gebdat.toString() + "\'";
@@ -210,14 +193,13 @@ public class Person {
 	public void updateIDs() {
 		if (vater != null) {
 			vaterid = vater.id;
-		} // end of if
+		}
 		if (mutter != null) {
 			mutterid = mutter.id;
-		} // end of if
+		}
 		if (ehepartner != null) {
 			ehepartnerid = ehepartner.id;
-		} // end of if
+		}
 	}
 
-	// Ende Methoden
-} // end of Person
+}
