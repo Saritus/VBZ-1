@@ -63,7 +63,7 @@ public class Settings extends JPanel {
 		textsizelabel.setHorizontalTextPosition(SwingConstants.CENTER);
 		cp.add(textsizelabel);
 		languagelabel.setBounds(346, 90, 150, 25);
-		languagelabel.setText("Sprache:");
+		languagelabel.setText("Sprache");
 		cp.add(languagelabel);
 		acceptbutton.setBounds(328, 368, 129, 33);
 		acceptbutton.setText("Übernehmen");
@@ -81,8 +81,7 @@ public class Settings extends JPanel {
 
 	// Anfang Methoden
 	public String buttonGroup1_getSelectedRadioButtonLabel() {
-		for (java.util.Enumeration<AbstractButton> e = buttonGroup1
-				.getElements(); e.hasMoreElements();) {
+		for (java.util.Enumeration<AbstractButton> e = buttonGroup1.getElements(); e.hasMoreElements();) {
 			AbstractButton b = e.nextElement();
 			if (b.isSelected())
 				return b.getText();
@@ -110,13 +109,19 @@ public class Settings extends JPanel {
 	}
 
 	public void setSize(int size) {
+		acceptbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		textsizelabel.setFont(new Font("Dialog", Font.BOLD, size));
+		languagelabel.setFont(new Font("Dialog", Font.BOLD, size));
+		deutschrb.setFont(new Font("Dialog", Font.BOLD, size));
+		englishrb.setFont(new Font("Dialog", Font.BOLD, size));
 		mainw.setSize(size);
 	}
 
 	public void jButton1_ActionPerformed(ActionEvent evt) {
 		String selectedButton = buttonGroup1_getSelectedRadioButtonLabel();
 		setLang(selectedButton);
-	} // end of jButton1_ActionPerformed
+		int selectedSize = jSlider1.getValue();
+		setSize(9 + 3 * selectedSize);
+	} // end
 
-	// Ende Methoden
 } // end of class Settings

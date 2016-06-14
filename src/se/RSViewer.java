@@ -121,7 +121,9 @@ public class RSViewer extends JPanel {
 	}
 
 	public void setSize(int size) {
-		// TODO: Setze neue Schriftgröße
+		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
+		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
 	// Ende Methoden

@@ -206,6 +206,7 @@ public class PersonEditor extends JPanel {
 	public void acceptbutton_ActionPerformed(ActionEvent evt) {
 		selected.setNachname(lnametf.getText());
 		selected.setVorname(fnametf.getText());
+		
 		mainw.updatePanels();
 
 	} // end of selectbutton_ActionPerformed
@@ -227,8 +228,20 @@ public class PersonEditor extends JPanel {
 		}
 	}
 
-	public void updateSize(int size) {
-		// TODO: Setze neue Schriftgröße
+	public void setSize(int size) {
+		
+		acceptbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		selectbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		newbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		cancelbutton.setFont(new Font("Dialog", Font.BOLD, size));
+
+		lnamelabel.setFont(new Font("Dialog", Font.BOLD, size));
+		fnamelabel.setFont(new Font("Dialog", Font.BOLD, size));
+		bdaylabel.setFont(new Font("Dialog", Font.BOLD, size));
+		genderlabel.setFont(new Font("Dialog", Font.BOLD, size));
+		fatherlabel.setFont(new Font("Dialog", Font.BOLD, size));
+		motherlabel.setFont(new Font("Dialog", Font.BOLD, size));
+		spouselabel.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
 	public void setLang(Language l) {

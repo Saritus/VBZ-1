@@ -142,6 +142,8 @@ public class PersonTable extends JPanel {
 	}
 
 	public void setSize(int size) {
-		// TODO: Setze neue Schriftgröße
+		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
+		printbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		jTable1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 }

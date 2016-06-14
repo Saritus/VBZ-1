@@ -91,13 +91,6 @@ public class SQL extends JPanel {
 
 	// Anfang Methoden
 
-	public static void main(String[] args) {
-		JFrame f = new JFrame("SQL");
-		f.add(new SQL(), BorderLayout.CENTER);
-		f.setSize(809, 537);
-		f.setVisible(true);
-	} // end of main
-
 	public void savebutton_ActionPerformed(ActionEvent evt) {
 		personlist.fillPersonInfo();
 		database.save(jTextField1.getText(), personlist);
@@ -119,14 +112,16 @@ public class SQL extends JPanel {
 	} // end of deletebutton_ActionPerformed
 
 	public void setLang(Language l) {
-		// TODO: Setze neue Sprache
 		savebutton.setText(l.SPEICHERN);
 		loadbutton.setText(l.LADEN);
 		deletebutton.setText(l.LÖSCHEN);
 	}
 
 	public void setSize(int size) {
-		// TODO: Setze neue Schriftgröße
+		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
+		loadbutton.setFont(new Font("Dialog", Font.BOLD, size));
+		deletebutton.setFont(new Font("Dialog", Font.BOLD, size));
+		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
 	public void fillDatabaseList() {

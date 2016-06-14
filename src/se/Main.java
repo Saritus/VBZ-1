@@ -56,11 +56,7 @@ public class Main extends JPanel {
 		tabbedPane.addTab("", createImageIcon("../icons/sql.gif"), sql);
 		tabbedPane.setMnemonicAt(4, KeyEvent.VK_5);
 
-		help = makeTextPanel("Hier kommt die Hilfe rein");
-		tabbedPane.addTab("", createImageIcon("../icons/help.gif"), help);
-		tabbedPane.setMnemonicAt(5, KeyEvent.VK_6);
-
-		help.setPreferredSize(new Dimension(783, 490));
+		sql.setPreferredSize(new Dimension(783, 490));
 
 		// Add the tabbed pane to this panel.
 		add(tabbedPane);
@@ -91,7 +87,7 @@ public class Main extends JPanel {
 	}
 
 	public static void main(String[] args) {
-		JFrame frame = new JFrame("Main");
+		JFrame frame = new JFrame("VBZ-Generator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(new Main(), BorderLayout.CENTER);
 		frame.pack();
@@ -137,7 +133,11 @@ public class Main extends JPanel {
 	}
 
 	public void setSize(int size) {
-		// TODO: Setze neue Schriftgröße
+		// TODO: Größe der Buttons prüfen - "Überneh..."
+		rsviewer.setSize(size);
+		sql.setSize(size);
+		personeditor.setSize(size);
+		persontable.setSize(size);
 	}
 
 	public void updatePanels() {
