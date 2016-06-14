@@ -3,9 +3,7 @@ package se;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 import javax.swing.table.*;
-import java.lang.*;
 import java.io.*;
 import java.awt.print.*;
 

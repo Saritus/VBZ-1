@@ -1,7 +1,5 @@
 package se;
 
-import java.util.*;
-
 /**
  *
  * Beschreibung

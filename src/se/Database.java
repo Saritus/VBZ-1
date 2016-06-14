@@ -1,9 +1,7 @@
 package se;
 
 import java.sql.*;
-
-import javax.swing.DefaultListModel;
-import javax.swing.JProgressBar;
+import javax.swing.*;
 
 /**
  *
