@@ -6,18 +6,25 @@ import java.io.*;
 import javax.imageio.*;
 
 /**
-*
-* Beschreibung
-*
-* @version 1.0 vom 28.01.2016
-* @author Sebastian Mischke
-*/
+ *
+ * Beschreibung
+ *
+ * @version 1.0 vom 28.01.2016
+ * @author Sebastian Mischke
+ */
 
 class MyCanvas extends Canvas {
+
+	/**
+	 * Constructor
+	 */
 	public MyCanvas() {
 		super();
 	}
 
+	/**
+	 * 
+	 */
 	public void paint(Graphics g) {
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
@@ -41,13 +48,16 @@ class MyCanvas extends Canvas {
 		g.drawString("Nachname", 521 - x, 59);
 		// Connections
 		g.drawLine(260, (217 - y / 2) - (13 + y / 2), 260, 279 - (int) 1.5 * y);
-		g.drawLine(13 + x / 2, (217 - y / 2) - (13 + y), (508 - x / 2),
-				(217 - y / 2) - (13 + y));
+		g.drawLine(13 + x / 2, (217 - y / 2) - (13 + y), (508 - x / 2), (217 - y / 2) - (13 + y));
 	}
 
+	/**
+	 * 
+	 * @param file
+	 *            file to save the image
+	 */
 	public void save(File file) {
-		BufferedImage image = new BufferedImage(this.getWidth(),
-				this.getHeight(), BufferedImage.TYPE_INT_RGB);
+		BufferedImage image = new BufferedImage(this.getWidth(), this.getHeight(), BufferedImage.TYPE_INT_RGB);
 		Graphics2D g2 = (Graphics2D) image.getGraphics();
 		paint(g2);
 		try {

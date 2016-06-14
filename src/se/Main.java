@@ -22,10 +22,12 @@ public class Main extends JPanel {
 	public PersonTable persontable;
 	public Settings settings;
 	public SQL sql;
-	public JComponent help;
 
 	public Language lang;
 
+	/**
+	 * Constructor
+	 */
 	public Main() {
 		super(new GridLayout(1, 1));
 
@@ -82,6 +84,10 @@ public class Main extends JPanel {
 		}
 	}
 
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("VBZ-Generator");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -96,7 +102,7 @@ public class Main extends JPanel {
 		frame.setLocation(x, y);
 	}
 
-	public static PersonList createExamplePersonList() {
+	private static PersonList createExamplePersonList() {
 		Person eins = new Person("Meier", "Hans", 'm', new MyDate(9, 11, 1995));
 		Person zwei = new Person("Müller", "Lisa", 'w', new MyDate(1, 11, 1991));
 		Person drei = new Person("Test", "Der", 'm', new MyDate(16, 11, 1992));
@@ -118,6 +124,10 @@ public class Main extends JPanel {
 		return plist;
 	}
 
+	/**
+	 * @param l
+	 *            object with language information
+	 */
 	public void setLang(Language l) {
 		lang = l;
 		rsviewer.setLang(l);
@@ -126,6 +136,10 @@ public class Main extends JPanel {
 		persontable.setLang(l);
 	}
 
+	/**
+	 * 
+	 * @param size
+	 */
 	public void setSize(int size) {
 		rsviewer.setSize(size);
 		sql.setSize(size);
@@ -133,6 +147,9 @@ public class Main extends JPanel {
 		persontable.setSize(size);
 	}
 
+	/**
+	 * 
+	 */
 	public void updatePanels() {
 		// TODO: update aller panels
 		personeditor.updateList();

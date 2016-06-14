@@ -75,6 +75,11 @@ public class PersonList {
 		return quantity;
 	}
 
+	/**
+	 * 
+	 * @param quantity
+	 *            amount of elements in the list
+	 */
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}

@@ -25,10 +25,12 @@ public class SQL extends JPanel {
 	private JTextField jTextField1 = new JTextField();
 	public Main main;
 
-	public SQL() {
-		this(new PersonList(), new Database(), new Main());
-	}
-
+	/**
+	 * 
+	 * @param pl
+	 * @param db
+	 * @param m
+	 */
 	public SQL(PersonList pl, Database db, Main m) {
 		super();
 		Container cp = this;
@@ -103,12 +105,24 @@ public class SQL extends JPanel {
 		jList1.setSelectedIndex(i);
 	}
 
+	/**
+	 * Changes the language of the text on the buttons
+	 * 
+	 * @param l
+	 *            object with language information
+	 */
 	public void setLang(Language l) {
 		savebutton.setText(l.SPEICHERN);
 		loadbutton.setText(l.LADEN);
 		deletebutton.setText(l.LÖSCHEN);
 	}
 
+	/**
+	 * Changes the size of the text on the buttons and the list
+	 * 
+	 * @param size
+	 *            value of the size for the text
+	 */
 	public void setSize(int size) {
 		savebutton.setFont(new Font("Dialog", Font.BOLD, size));
 		loadbutton.setFont(new Font("Dialog", Font.BOLD, size));
@@ -116,6 +130,9 @@ public class SQL extends JPanel {
 		jList1.setFont(new Font("Dialog", Font.BOLD, size));
 	}
 
+	/**
+	 * 
+	 */
 	public void fillDatabaseList() {
 		database.getTables(jList1Model);
 	}
