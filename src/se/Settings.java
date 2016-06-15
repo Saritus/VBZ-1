@@ -75,11 +75,7 @@ public class Settings extends JPanel {
 		setVisible(true);
 	}
 
-	/**
-	 * 
-	 * @return text of the selected radio button
-	 */
-	public String buttonGroup1_getSelectedRadioButtonLabel() {
+	private String buttonGroup1_getSelectedRadioButtonLabel() {
 		for (java.util.Enumeration<AbstractButton> e = buttonGroup1.getElements(); e.hasMoreElements();) {
 			AbstractButton b = e.nextElement();
 			if (b.isSelected())

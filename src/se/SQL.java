@@ -28,8 +28,11 @@ public class SQL extends JPanel {
 	/**
 	 * 
 	 * @param pl
+	 *            the personlist with all the data for the program
 	 * @param db
+	 *            the database object for the connection to the mysql server
 	 * @param m
+	 *            the main window of the program
 	 */
 	public SQL(PersonList pl, Database db, Main m) {
 		super();

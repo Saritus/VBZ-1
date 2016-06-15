@@ -87,6 +87,7 @@ public class Main extends JPanel {
 	/**
 	 * 
 	 * @param args
+	 *            execution arguments. will not be used
 	 */
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("VBZ-Generator");
@@ -125,6 +126,8 @@ public class Main extends JPanel {
 	}
 
 	/**
+	 * Sets the language for all panles
+	 * 
 	 * @param l
 	 *            object with language information
 	 */
@@ -137,8 +140,10 @@ public class Main extends JPanel {
 	}
 
 	/**
+	 * Sets the font of all buttons and labels of all panels
 	 * 
 	 * @param size
+	 *            font size
 	 */
 	public void setSize(int size) {
 		rsviewer.setSize(size);
