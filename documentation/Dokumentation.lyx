@@ -456,7 +456,7 @@ Abgabe der Projektdokumentation
 \begin_inset Text
 
 \begin_layout Plain Layout
-17.06.2016
+21.06.2016
 \end_layout
 
 \end_inset
@@ -523,6 +523,13 @@ Praesentation
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Ressourcenplanung und Organisation
 \end_layout
@@ -534,105 +541,14 @@ Das Projekt teilt sich zwischen 3 Personen auf.
 \end_layout
 
 \begin_layout Standard
-Unsere Aufteilung sieht einen Konzepter, einen Entwickler und einen Designer
- vor.
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-Konzepter
-\end_layout
-
-\begin_layout Itemize
-Erarbeitung der zentralen Aktivität
-\end_layout
-
-\begin_layout Itemize
-Analyse der Zielgruppen
-\end_layout
-
-\begin_layout Itemize
-Inhaltliche, gestalterische und funktionale Ausarbeitung 
-\end_layout
-
-\begin_layout Itemize
-Strukturelle Aufbereitung
-\end_layout
-
-\begin_layout Itemize
-Projektmanagement
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-Entwickler 
-\end_layout
-
-\begin_layout Itemize
-Funktionale Umsetzung der Benutzeroberfläche
-\end_layout
-
-\begin_layout Itemize
-Auswahl einer technischen Herangehensweise
-\end_layout
-
-\begin_layout Itemize
-Programmierung von Animationen und Ereignissen
-\end_layout
-
-\begin_layout Itemize
-Integration gestalterischer Vorarbeiten und konzeptioneller Vorgaben
-\end_layout
-
-\begin_layout Standard
-\begin_inset VSpace smallskip
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\series bold
-\color black
-Designer
-\end_layout
-
-\begin_layout Itemize
-Gestaltung der Benutzeroberfläche
-\end_layout
-
-\begin_layout Itemize
-Erarbeitung eines einheitlichen Farbdesign
-\end_layout
-
-\begin_layout Itemize
-Auswahl geeigneter Typografie
-\end_layout
-
-\begin_layout Itemize
-Integration und Berücksichtigung eines geeigneten Interaktionskonzeptes
-\end_layout
-
-\begin_layout Standard
+Unsere Aufteilung sieht die Analyse, Implementierung und Dokumentation vor.
+ Zwei Personen (Anja Handrianz und Julian Fuchs) beschäftigen sich mit der
+ gestalterischen und funktionalen Ausarbeitung, dem Pflichtenheft sowie
+ der Entwicklerdokumentation.
+ Eine Person (Sebastian Mischke) implementiert das Programm, was die funktionale
+ Umsetzung der Benutzeroberfläche, die Auswahl einer technischen Herangehensweis
+e und die Integration gestalterischer Vorarbeiten beinhaltet.
+ 
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -650,12 +566,15 @@ Managementwerkzeuge
 \begin_layout Standard
 Für das Projektmanagemant wird die Subversion-Versionverhalten SVN in Topcased
  genutzt.
+ Zur Erstellung der Dokumentation wird Lyx verwendet.
  
 \end_layout
 
 \begin_layout Standard
-Zur Erstellung der Dokumentation wird Lyx verwendet.
- 
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -719,16 +638,36 @@ Anwendungsfallanalyse
 \begin_layout Standard
 Die Anwendungsoberfläche strukturiert sich in drei Teile: die Menüleiste,
  den Editor - mit seinen Benutzerelementen und der Bearbeitungsoberfläche
- - und die Anzeige - mit deren Anzeigeelementen und Statistiken.
-\end_layout
-
-\begin_layout Standard
-In der Menüleiste sind alle Optionen für das Ändern, Speichern und Laden
+ - und die Anzeige - mit deren Anzeigeelementen und Grafiken.
+ In der Menüleiste sind alle Optionen für das Ändern, Speichern und Laden
  der Anzeige realisiert.
 \end_layout
 
 \begin_layout Standard
-Use-Case-Diagramm:
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/UseCase.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Use-Case-Diagramm
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -742,7 +681,92 @@ e anzupassen.
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Anwendungsbeispiel:
+\end_layout
+
+\begin_layout Enumerate
+Start des Programms (siehe 6.
+ Anwenderdokumentation)
+\end_layout
+
+\begin_layout Enumerate
+Anwählen des Einstellungen-Icons
+\end_layout
+
+\begin_layout Enumerate
+Festlegen der Sprache und der Textgröße
+\end_layout
+
+\begin_layout Enumerate
+Mit dem Button 
+\begin_inset Quotes eld
+\end_inset
+
+Übernehmen
+\begin_inset Quotes erd
+\end_inset
+
+ bestätigen
+\end_layout
+
+\begin_layout Enumerate
+Anwählen des Datenbank-Icons
+\end_layout
+
+\begin_layout Enumerate
+Eine vorhandenen Stammbaum auswählen und mit dem Button 
+\begin_inset Quotes eld
+\end_inset
+
+laden
+\begin_inset Quotes erd
+\end_inset
+
+ bestätigen
+\end_layout
+
+\begin_layout Enumerate
+Anwählen des Personen-Icons
+\end_layout
+
+\begin_layout Enumerate
+Über die Eingabemaske eine Person zum Stammbaum hinzufügen und mit dem Button
+ 
+\begin_inset Quotes eld
+\end_inset
+
+Übernehmen
+\begin_inset Quotes erd
+\end_inset
+
+ bestätigen
+\end_layout
+
+\begin_layout Enumerate
+Anwählen des Tabellen-Icons
+\end_layout
+
+\begin_layout Enumerate
+Stammbaum über den Button 
+\begin_inset Quotes eld
+\end_inset
+
+speichern
+\begin_inset Quotes erd
+\end_inset
+
+ unter einem beliebigen Dateinamen abspeichern 
+\end_layout
+
+\begin_layout Enumerate
+Beenden des Programms
 \end_layout
 
 \begin_layout Standard
@@ -757,34 +781,48 @@ Problembereichsanalyse
 \end_layout
 
 \begin_layout Standard
-Unser Programm besteht aus einem JFrame, welcher 4 JPanels beinhaltet (Person,
- Graph, Tabelle, Datenbank RICHTIG BENENNEN).
- Um einen Stammbaum Anzeigen zu lassen, muss der Zugriff und das Auslesen
+Unser Programm besteht aus einem JFrame, welcher 5 JPanels beinhaltet (Einstellu
+ngen, Graph, Person-Editor, Tabelle, Stammbaum-Archiv).
+ Um einen Stammbaum anzeigen zu lassen, muss der Zugriff und das Auslesen
  aus einer Datenbank möglich sein.
- Dafür wurde bei dem Freehoster XY ein account angelegt und anschließend
+ Dafür wurde bei dem Freehoster XY ein Account angelegt und anschließend
  die Datenbank erzeugt.
- Anschließend muss eine Funktion zum Anlegen eines Stammbaums implementiert
- werden.
- Für jeden angelegten Stammbaum wird eine Tabelle erzeugt die den Namen
- des Stammbaumes trägt.
- Diese Tabelle muss nun mit Personendaten gefüllt werden (Name, Vorname,
- Alter, Verwandtschaftsgrad ........).
+ Nun muss eine Funktion zum Anlegen eines Stammbaums implementiert werden.
+ Für jeden angelegten Stammbaum wird eine Tabelle erzeugt, die den Namen
+ des Stammbaums trägt.
+ Diese Tabelle kann nun mit Personendaten gefüllt werden (Nachname, Vorname,
+ Geburtsdatum, Geschlecht, Vater, Mutter, Ehepartner).
  Hierfür wird eine Klasse “Person” geschrieben.
- In dem JPanel “Person” befindet sich eine Eingabemaske in der man die Personend
-aten einträgt.
- Nun kann der Stammbaum als Tabelle ausgegeben werden, was inhaltlich der
- angelegten Tabelle der Datenbank entspricht oder aber auch als Graph angezeigt
- werden.
+ In dem JPanel “Personen-Editor” befindet sich eine Eingabemaske in der
+ man die Personendaten einträgt.
+ Nun kann der Stammbaum als Graph oder Tabelle ausgegeben werden, die dem
+ Inhalt der angelegten Tabelle in der Datenbank entsprechen.
+
+\emph on
  Um als Graph anzuzeigen wird...
- WIE?.
- Unter dem JPanel „Datenbank“ kann man einen bereits angelegten Stammbaum
+ WIE WIRD DAS UMGESETZT?
+\emph default
+.
+ Unter dem JPanel „Stammbaum-Archiv“ kann man einen bereits angelegten Stammbaum
  aus einer Übersicht auswählen, um diesen zu löschen, anzuzeigen oder zu
  editieren.
- Dafür ist eine weitere Klasse nötig, welche …verwaltet (PersonList)???.
- Schriftgröße und Sprachänderung zwischen Deutsch und Englisch sind in einem
- extra JPanel erreichbar, um das Programm der Individuellen Bedürfnisse
- des Nutzers anzupassen.
- Für eventuelle Benutzungsfragen steht dem Nutzer eine Hilfe zur Verfügung.
+ Dafür ist eine weitere Klasse nötig, welche 
+\emph on
+…verwaltet (PersonList)???
+\emph default
+.
+ In dem JPanel 
+\begin_inset Quotes eld
+\end_inset
+
+Einstellungen
+\begin_inset Quotes erd
+\end_inset
+
+ kann das Programm der Individuellen Bedürfnisse des Nutzers angepasst werden.
+ Es sind drei Einstellungsgrößen für die Schriftgröße wählbar und die Sprache
+ kann zwischen Deutsch und Englisch umgestellt werden.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -796,6 +834,10 @@ aten einträgt.
 
 \begin_layout Subsection
 Stand der Wissenschaft und Technik
+\end_layout
+
+\begin_layout Standard
+Die Nachnutzung des Programms
 \end_layout
 
 \begin_layout Standard
@@ -823,19 +865,38 @@ Grobarchitektur, z.B.
  Verteilungsdiagramm(e) im Falle von Client-Server-Anwendungen.
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/Systemarchitektur.png
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsection
 Entwurf der Benutzeroberfläche
 \end_layout
 
 \begin_layout Standard
+\begin_inset Graphics
+	filename images/00GUI.jpg
+	lyxscale 50
+	scale 50
+	BoundingBox 0bp 0bp 1792bp 3380bp
+	clip
+	rotateOrigin center
 
-\emph on
-\color magenta
-Grafische Darstellung der Struktur der GUI und der über die GUI ausgelösten
- Aktivitäten.
- Hier sind bereits die Klassen für die Komposition der Oberflächenelemente
- anzugeben, auch die Struktur von Menüs usw.
- Darstellung der Dialoggestaltung.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -861,6 +922,20 @@ Datenverwaltung / Datenbankentwurf
 \color magenta
 Beschreibung der persistenten Datenspeicherung.
  Angabe von ER-Diagrammen und des OR-Mappings.
+\end_layout
+
+\begin_layout Standard
+Für eine persistente Datenhaltung werden die Stammbäume in einer MS SQL
+ Datenbank gespeichert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename images/er_modell.png
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -948,10 +1023,6 @@ Beschreibung der Ergebnisse der mit JUnit spezifizierten und ausgeführten
 
 \begin_layout Section
 Anwenderdokumentation
-\end_layout
-
-\begin_layout Standard
-evtl unterscheiden admin / benutzer / und Firma welche Projekt kauft
 \end_layout
 
 \begin_layout Standard
