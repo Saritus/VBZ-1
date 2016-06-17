@@ -68,72 +68,14 @@
 
 \begin_body
 
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-maketitle
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-thispagestyle{empty}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-bibliographystyle{alphadin}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Title
 
-\size normal
-\color magenta
-\lang ngerman
-<
-\size default
+\series bold
+\size larger
+\color black
 Verwandtschaftsbeziehungen
-\size normal
->
+\series default
 \size default
-\color inherit
 
 \begin_inset Newline newline
 \end_inset
@@ -143,7 +85,8 @@ Verwandtschaftsbeziehungen
 \end_inset
 
 
-\size normal
+\series bold
+\size larger
 Projektdokumentation zum Softwareentwicklungsprojekt
 \begin_inset Newline newline
 \end_inset
@@ -153,6 +96,9 @@ Projektdokumentation zum Softwareentwicklungsprojekt
 \end_inset
 
 (Entwicklerdokumentation)
+\series default
+\size normal
+
 \begin_inset Newline newline
 \end_inset
 
@@ -177,40 +123,10 @@ Software Engineering I / II
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Author
 
-\lang ngerman
-Entwickler:
-\color magenta
- <Sebastian Mischke>
-\color inherit
-, 
-\color magenta
-<Julian Fuchs>
-\color inherit
-, 
-\color magenta
-<Anja Handrianz>
-\color inherit
-
+\color black
+Entwickler: Sebastian Mischke, Julian Fuchs, Anja Handrianz
 \begin_inset Newline newline
 \end_inset
 
@@ -218,17 +134,13 @@ Entwickler:
 \begin_inset VSpace defskip
 \end_inset
 
-Auftraggeber: 
-\color magenta
-<Prof.
+Auftraggeber: Prof.
  Dr.-Ing.
  habil.
- Hartmut Fritzsche>
+ Hartmut Fritzsche
 \begin_inset Newline newline
 \end_inset
 
-
-\color inherit
 
 \begin_inset VSpace 0.5cm
 \end_inset
@@ -242,38 +154,7 @@ Hochschule für Technik und Wirtschaft Dresden
 
 \begin_layout Standard
 
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-end{center}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%
-\backslash
-maketitle
-\end_layout
-
-\end_inset
-
-
+\color black
 \begin_inset VSpace 1cm
 \end_inset
 
@@ -282,13 +163,14 @@ maketitle
 
 \begin_layout Title
 
-\lang ngerman
+\size larger
+\color black
 Zusammenfassung
 \end_layout
 
 \begin_layout Standard
 
-\lang ngerman
+\color black
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -297,7 +179,7 @@ Zusammenfassung
 
 \begin_layout Standard
 
-\lang ngerman
+\color black
 Die Applikation bietet dem Nutzer die Möglichkeit Informationen über Personen
  sowie deren Verwandtschaftsbeziehungen über eine Eingabemaske einzutragen
  und abzuspeichern.
@@ -311,7 +193,7 @@ n.
 
 \begin_layout Standard
 
-\lang ngerman
+\color black
 \begin_inset Newpage newpage
 \end_inset
 
@@ -330,36 +212,36 @@ LatexCommand tableofcontents
 
 \begin_layout Section
 
-\lang ngerman
+\color black
 Einleitung
 \end_layout
 
 \begin_layout Standard
+Ziel des Projektes ist es ein Programm zu entwickeln und eine Dokumentation
+ darüber zu verfassen.
+ Anhand dieser Dokumentation soll für den Leser verständlich werden wie
+ die Software funktioniert und welche Funktionalitäten mit dem Programm
+ möglich sind.
+ Das vorhandene Programm heißt Verwandtschaftsbeziehungs-Generator (VBZ-Generato
+r).
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Beschreibung des Vorhabens.
- Erläuterungen zur Entwicklung und Nutzung des Projekts.
- Einordnung der geschaffenen Lösung in den wissenschaftlichen Kontext.
- 
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Projektmanagement
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Vorgegebener Zeitablauf
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset Tabular
 <lyxtabular version="3" rows="3" columns="2">
 <features rotate="0" tabularvalignment="middle">
@@ -370,8 +252,6 @@ Vorgegebener Zeitablauf
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Vorlage Pflichtenheft
 \end_layout
 
@@ -381,8 +261,6 @@ Vorlage Pflichtenheft
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 12.05.2016
 \end_layout
 
@@ -394,8 +272,6 @@ Vorlage Pflichtenheft
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Bearbeitung Analyse/Entwurf:
 \end_layout
 
@@ -416,8 +292,6 @@ Bearbeitung Analyse/Entwurf:
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Klassendiagramme, Komponentendiagramme, Paketstruktur; Verteilungsdiagramme,
  ...
  Festlegung der Rollenverteilung
@@ -443,8 +317,6 @@ Klassendiagramme, Komponentendiagramme, Paketstruktur; Verteilungsdiagramme,
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace defskip
 \end_inset
 
@@ -459,8 +331,6 @@ Klassendiagramme, Komponentendiagramme, Paketstruktur; Verteilungsdiagramme,
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Vorlage Projektdokumentation (Zwischenstand)
 \end_layout
 
@@ -470,8 +340,6 @@ Vorlage Projektdokumentation (Zwischenstand)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 02.06.20156
 \end_layout
 
@@ -483,14 +351,10 @@ Vorlage Projektdokumentation (Zwischenstand)
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Durchführung der Implementierung 
 \end_layout
 
 \begin_layout Plain Layout
-
-\lang ngerman
 User Interface Prototyping
 \end_layout
 
@@ -514,8 +378,6 @@ User Interface Prototyping
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace defskip
 \end_inset
 
@@ -530,8 +392,6 @@ User Interface Prototyping
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Gruppenkolloquium
 \end_layout
 
@@ -541,9 +401,7 @@ Gruppenkolloquium
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
-23.06.2016
+14.06.2016
 \end_layout
 
 \end_inset
@@ -554,8 +412,6 @@ Gruppenkolloquium
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Implementation, Testfallspezifikation, Testung (JUnit) Bereitstellung API
  (Javadoc)
 \end_layout
@@ -591,8 +447,6 @@ Implementation, Testfallspezifikation, Testung (JUnit) Bereitstellung API
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Abgabe der Projektdokumentation
 \end_layout
 
@@ -602,9 +456,7 @@ Abgabe der Projektdokumentation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
-23.06.2016
+17.06.2016
 \end_layout
 
 \end_inset
@@ -615,8 +467,6 @@ Abgabe der Projektdokumentation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Vorbereitung Präsentation
 \end_layout
 
@@ -651,8 +501,6 @@ Vorbereitung Präsentation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
 Praesentation 
 \end_layout
 
@@ -662,9 +510,7 @@ Praesentation
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\lang ngerman
-30.06.2016
+23.06.2016
 \end_layout
 
 \end_inset
@@ -678,59 +524,55 @@ Praesentation
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Ressourcenplanung und Organisation
 \end_layout
 
 \begin_layout Standard
+Das Projekt teilt sich zwischen 3 Personen auf.
+ Die Zusammenarbeit aller 3 Beteiligten ist dabei erforderlich.
+ 
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Einsatz personeller Ressourcen, Rollenverteilung im Projekt, Zuordnung von
- Aufgaben zu Rollen, inhaltliche Schnittstellen.
+\begin_layout Standard
+Unsere Aufteilung sieht einen Konzepter, einen Entwickler und einen Designer
+ vor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 
-\lang ngerman
+\series bold
+\color black
 Konzepter
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Erarbeitung der zentralen Aktivität
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Analyse der Zielgruppen
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Inhaltliche, gestalterische und funktionale Ausarbeitung 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Strukturelle Aufbereitung
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Projektmanagement
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace smallskip
 \end_inset
 
@@ -739,209 +581,220 @@ Projektmanagement
 
 \begin_layout Standard
 
-\lang ngerman
+\series bold
+\color black
+Entwickler 
+\end_layout
+
+\begin_layout Itemize
+Funktionale Umsetzung der Benutzeroberfläche
+\end_layout
+
+\begin_layout Itemize
+Auswahl einer technischen Herangehensweise
+\end_layout
+
+\begin_layout Itemize
+Programmierung von Animationen und Ereignissen
+\end_layout
+
+\begin_layout Itemize
+Integration gestalterischer Vorarbeiten und konzeptioneller Vorgaben
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+\color black
 Designer
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Gestaltung der Benutzeroberfläche
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Erarbeitung eines einheitlichen Farbdesign
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Auswahl geeigneter Typografie
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
+\begin_layout Itemize
 Integration und Berücksichtigung eines geeigneten Interaktionskonzeptes
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace smallskip
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
-
-\lang ngerman
-Entwickler 
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-Funktionale Umsetzung der Benutzeroberfläche
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-Auswahl einer technischen Herangehensweise
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-Programmierung von Animationen und Ereignissen
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-Integration gestalterischer Vorarbeiten 
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-konzeptioneller Vorgaben
-\end_layout
-
 \begin_layout Subsection
-
-\lang ngerman
 Werkzeugunterstützung 
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang ngerman
 Managementwerkzeuge
 \end_layout
 
 \begin_layout Standard
-
-\emph on
-\color magenta
-\lang ngerman
-Beschreibung des Einsatzes von Werkzeugen für das Projektmanagement (svn,
- Mercurial, Lyx etc.)
+Für das Projektmanagemant wird die Subversion-Versionverhalten SVN in Topcased
+ genutzt.
+ 
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
-Lyx
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-SVN in Topcased
+Zur Erstellung der Dokumentation wird Lyx verwendet.
+ 
 \end_layout
 
 \begin_layout Subsubsection
-
-\lang ngerman
 Softwareentwicklungswerkzeuge
 \end_layout
 
 \begin_layout Standard
+Zur Implementierung werden folgende Werkzeuge verwendet:
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Beschreibung des Einsatzes von Werkzeugen für die Softwareentwicklung (Topcased,
- JDK etc.)
+\begin_layout Itemize
+Eclipe
+\end_layout
+
+\begin_layout Itemize
+SVN in Topcased 
+\end_layout
+
+\begin_layout Itemize
+Java-Editor 
+\end_layout
+
+\begin_layout Itemize
+Sublime 
+\end_layout
+
+\begin_layout Itemize
+Php MyAdmin
 \end_layout
 
 \begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
 
-\lang ngerman
-Eclipse mit Topcased
-\end_layout
 
-\begin_layout Standard
-
-\lang ngerman
-Java-Editor
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-Sublime
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
-php MyAdmin
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Pflichtenheft
 \end_layout
 
 \begin_layout Standard
+Das Pflichtenheft liegt in einem gesonderten Dokument vor.
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Hier wird auf das als gesondertes Dokument vorgelegte Pflichtenheft verwiesen.
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Anforderungsanalyse und Entwurf
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Anwendungsfallanalyse
 \end_layout
 
 \begin_layout Standard
+Die Anwendungsoberfläche strukturiert sich in drei Teile: die Menüleiste,
+ den Editor - mit seinen Benutzerelementen und der Bearbeitungsoberfläche
+ - und die Anzeige - mit deren Anzeigeelementen und Statistiken.
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Detailliertere Beschreibungen der UseCases des Pflichtenheftes, Darstellung
- durch Aktivitätsdiagramme.
- Beschreibung von Anwendungsszenarien, Darstellung durch Sequenzdiagramme.
- Insbesondere ist darzustellen, wer die Akteure sind und welche Aufgaben
- sie jeweils haben.
+\begin_layout Standard
+In der Menüleiste sind alle Optionen für das Ändern, Speichern und Laden
+ der Anzeige realisiert.
+\end_layout
+
+\begin_layout Standard
+Use-Case-Diagramm:
+\end_layout
+
+\begin_layout Standard
+Dem Anwendungsnutzer steht frei die Schriftgröße und Sprache an seine Bedürfniss
+e anzupassen.
+ Er hat die Möglichkeit einen Stammbaum anzulegen, zu bearbeiten oder zu
+ löschen, indem er Personen hinzufügt, löscht oder Personendaten ändert.
+ Der Nutzer erhält eine Ausgabe in Form eines Graphen oder kann sich die
+ Datensätze eines Stammbaums als Tabelle ausgeben lassen.
+ 
+\end_layout
+
+\begin_layout Standard
+Anwendungsbeispiel:
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Problembereichsanalyse
 \end_layout
 
 \begin_layout Standard
+Unser Programm besteht aus einem JFrame, welcher 4 JPanels beinhaltet (Person,
+ Graph, Tabelle, Datenbank RICHTIG BENENNEN).
+ Um einen Stammbaum Anzeigen zu lassen, muss der Zugriff und das Auslesen
+ aus einer Datenbank möglich sein.
+ Dafür wurde bei dem Freehoster XY ein account angelegt und anschließend
+ die Datenbank erzeugt.
+ Anschließend muss eine Funktion zum Anlegen eines Stammbaums implementiert
+ werden.
+ Für jeden angelegten Stammbaum wird eine Tabelle erzeugt die den Namen
+ des Stammbaumes trägt.
+ Diese Tabelle muss nun mit Personendaten gefüllt werden (Name, Vorname,
+ Alter, Verwandtschaftsgrad ........).
+ Hierfür wird eine Klasse “Person” geschrieben.
+ In dem JPanel “Person” befindet sich eine Eingabemaske in der man die Personend
+aten einträgt.
+ Nun kann der Stammbaum als Tabelle ausgegeben werden, was inhaltlich der
+ angelegten Tabelle der Datenbank entspricht oder aber auch als Graph angezeigt
+ werden.
+ Um als Graph anzuzeigen wird...
+ WIE?.
+ Unter dem JPanel „Datenbank“ kann man einen bereits angelegten Stammbaum
+ aus einer Übersicht auswählen, um diesen zu löschen, anzuzeigen oder zu
+ editieren.
+ Dafür ist eine weitere Klasse nötig, welche …verwaltet (PersonList)???.
+ Schriftgröße und Sprachänderung zwischen Deutsch und Englisch sind in einem
+ extra JPanel erreichbar, um das Programm der Individuellen Bedürfnisse
+ des Nutzers anzupassen.
+ Für eventuelle Benutzungsfragen steht dem Nutzer eine Hilfe zur Verfügung.
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Analyse und Strukturierung des Problems.
- Identifizierung von Teilproblemen.
- Identifizierung von Klassen.
- Hier sind besonders verständilche verbale Beschreibungen notwendig!
+\begin_layout Standard
+\begin_inset VSpace smallskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Stand der Wissenschaft und Technik
 \end_layout
 
@@ -949,7 +802,6 @@ Stand der Wissenschaft und Technik
 
 \emph on
 \color magenta
-\lang ngerman
 Überlegungen zur Abwägung zwischen Nachnutzung und Eigenentwicklung.
  Dieser Punkt kann recht umfangreich sein, wenn vorhandene Lösungen erst
  analysiert werden müssen (z.B.
@@ -957,8 +809,6 @@ Stand der Wissenschaft und Technik
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Entwurf der Systemarchitektur
 \end_layout
 
@@ -966,7 +816,6 @@ Entwurf der Systemarchitektur
 
 \emph on
 \color magenta
-\lang ngerman
 Grobarchitektur, z.B.
  Darstellung eines Schichtenmodells.
  Komponentenbildung.
@@ -975,8 +824,6 @@ Grobarchitektur, z.B.
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Entwurf der Benutzeroberfläche
 \end_layout
 
@@ -984,7 +831,6 @@ Entwurf der Benutzeroberfläche
 
 \emph on
 \color magenta
-\lang ngerman
 Grafische Darstellung der Struktur der GUI und der über die GUI ausgelösten
  Aktivitäten.
  Hier sind bereits die Klassen für die Komposition der Oberflächenelemente
@@ -993,8 +839,6 @@ Grafische Darstellung der Struktur der GUI und der über die GUI ausgelösten
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Entwurf der Funktionalität/Interaktionsmodell
 \end_layout
 
@@ -1002,15 +846,12 @@ Entwurf der Funktionalität/Interaktionsmodell
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der logischen Struktur der Anwendung, Klassendiagramme, Zustandsdia
 gramme, Schnittstellenspezifikationen (Interfaces!) und verwendete bzw.
  selbst definierte Protokolle.
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Datenverwaltung / Datenbankentwurf
 \end_layout
 
@@ -1018,14 +859,11 @@ Datenverwaltung / Datenbankentwurf
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der persistenten Datenspeicherung.
  Angabe von ER-Diagrammen und des OR-Mappings.
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Implementation
 \end_layout
 
@@ -1033,7 +871,6 @@ Implementation
 
 \emph on
 \color magenta
-\lang ngerman
 Abgrenzung von Geschäftsklassen und Fachklassen.
  Erstellung bzw.
  Generierung der Quellcodes.
@@ -1043,13 +880,10 @@ Abgrenzung von Geschäftsklassen und Fachklassen.
 
 \emph on
 \color magenta
-\lang ngerman
 Implementierung von Algorithmen.
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Der Build-Prozess
 \end_layout
 
@@ -1057,14 +891,11 @@ Der Build-Prozess
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der Erstellung der auszuliefernden Anwendung.
  Enthält auch eine Installationsanleitung.
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 API-Dokumentation
 \end_layout
 
@@ -1072,13 +903,10 @@ API-Dokumentation
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der Erstellung der API-Dokumentation (Javadoc).
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Teststrategien und -werkzeuge
 \end_layout
 
@@ -1086,15 +914,12 @@ Teststrategien und -werkzeuge
 
 \emph on
 \color magenta
-\lang ngerman
 Hier wird beschrieben, ob und wenn ja welche Testwerkzeuge eingesetzt werden
  (z.B.
  JUnit).
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Testfallspezifikation
 \end_layout
 
@@ -1102,15 +927,12 @@ Testfallspezifikation
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der JUnit-Testfälle.
  Insbesondere sollen Überprüfungen mit Assert-Prädikaten dargestellt werden.
  
 \end_layout
 
 \begin_layout Subsection
-
-\lang ngerman
 Testdurchführung und Testergebnisse
 \end_layout
 
@@ -1118,7 +940,6 @@ Testdurchführung und Testergebnisse
 
 \emph on
 \color magenta
-\lang ngerman
 Beschreibung der Ergebnisse der mit JUnit spezifizierten und ausgeführten
  Testfälle.
  Zusätzlich ist ein Testbericht zu erstellen.
@@ -1126,60 +947,86 @@ Beschreibung der Ergebnisse der mit JUnit spezifizierten und ausgeführten
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Anwenderdokumentation
 \end_layout
 
 \begin_layout Standard
+evtl unterscheiden admin / benutzer / und Firma welche Projekt kauft
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Hier sollte eine Anleitung zur Installation enthalten sein.
- Empfohlen wird die Erstellung einer Web-Site für das Projekt.
+\begin_layout Standard
+Admin:   
+\end_layout
+
+\begin_layout Standard
+Kompilierung unter Windows/Linux/Mac:   Zuerst muss sichergestellt werden,
+ dass  das  Java SDK auf den Computer installiert ist und auch lauffähig
+ ist.
+ Zur Kompilierung ist die Umgebungsvariable zu setzen (im selben Pfad wo
+ auch Java SDK installiert ist).
+ Als nächstes muss die Eingabeaufforderung z.B.
+ mit dem Befehl „cmd“ geöffnet werden.
+ Im Folgenden muss man in dem Pfad navigieren wo sich die Projektdateien
+ befinden.
+ Dort ist es notwendig zunächst alle Klassen zu löschen.
+ (Befehl: del /S *.class) Nun müssen die Klassen neu erstellt werden damit
+ Änderungen übernommen werden.
+ (Befehl: javac  ….
+ ) Jetzt kann das Projekt ausgeführt werden.
+ (Befehl: java ….) WIE AUF RECHNER INSTALLIEREN FÜR NUTZER?   
+\end_layout
+
+\begin_layout Standard
+Nutzer: 
+\end_layout
+
+\begin_layout Standard
+Auf desktop das Programm „VBZ-Generator“ mit einem Doppelklick starten.
+ Das Programm wird ausgeführt.
+ Eine Anmeldung ist nicht notwendig.
 \end_layout
 
 \begin_layout Section
-
-\lang ngerman
 Projektbewertung aus Entwicklersicht
 \end_layout
 
 \begin_layout Standard
+Am Ende des Projektes ist es uns erfolgreich gelungen ein Programm zur Generieru
+ng von einem oder mehrerer Stammbäume zu erstellen.
+ Dabei konnten wir alle uns aufgefallenen lösen.
+ 
+\end_layout
 
-\emph on
-\color magenta
-\lang ngerman
-Einschätzung des Entwicklungsstandes des Projekts.
- Beantwortung der Frage 
-\begin_inset Quotes pld
-\end_inset
+\begin_layout Standard
+Zusätzlich ist die Umstellung der Sprache und Schriftgröße sowie das Anlegen
+ eines Hilfemenüs gelungen.
+ WEITERE SOLL MUSS KANN KRITERIEN AUFLISTEN??   
+\end_layout
 
-Was soll als nächstes getan werden, wenn noch Zeit bzw.
- Geld zur Verfügung gestellt wird?
-\begin_inset Quotes prd
-\end_inset
+\begin_layout Standard
+Wenn mehr Zeit zur Verfügung stünde, könnten zusätzliche Funktionalitäten
+ wie z.B.
+ ein eine Nutzerverwaltung mit Login und das Teilen von Stammbäumen mit
+ anderen Nutzern, implementiert werden.
+ 
+\end_layout
 
+\begin_layout Standard
+Mit entsprechendem Budget könnte man die SQL-Datenbank bei einem „??nicht
+ free hoster??“ anlegen.
+   
+\end_layout
 
+\begin_layout Standard
+Die Gestaltung der Entwicklungsumgebung (Pflichtenheft, Dokumentation) hat
+ uns geholfen an Dinge zu denken die uns sonst nicht aufgefallen wären ??????.
 \end_layout
 
 \begin_layout Standard
 
-\emph on
-\color magenta
-\lang ngerman
-Verbesserungsvorschläge, z.B.
- zur Gestaltung der Entwicklerdokumentation.
 \end_layout
 
 \begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-
-\lang ngerman
 \begin_inset VSpace defskip
 \end_inset
 
@@ -1187,8 +1034,6 @@ Verbesserungsvorschläge, z.B.
 \end_layout
 
 \begin_layout Standard
-
-\lang ngerman
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "gdi_I_bib,/Users/fritzsch/workstation/SF/Literatur-Datenbank/informatikbib1"
