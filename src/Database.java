@@ -1,5 +1,3 @@
-package se;
-
 import java.sql.*;
 import javax.swing.*;
 

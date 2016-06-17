@@ -1,8 +1,9 @@
-package se;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**
  * Main class of the application, which creates the tabbedPane
@@ -36,23 +37,23 @@ public class Main extends JPanel {
 		database = new Database();
 
 		settings = new Settings(this);
-		tabbedPane.addTab("", createImageIcon("../icons/opt.gif"), settings);
+		tabbedPane.addTab("", createImageIcon("/icons/opt.gif"), settings);
 		tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
 
 		rsviewer = new RSViewer(personlist);
-		tabbedPane.addTab("", createImageIcon("../icons/rsv.gif"), rsviewer);
+		tabbedPane.addTab("", createImageIcon("/icons/rsv.gif"), rsviewer);
 		tabbedPane.setMnemonicAt(1, KeyEvent.VK_2);
 
 		personeditor = new PersonEditor(personlist, this);
-		tabbedPane.addTab("", createImageIcon("../icons/pe.gif"), personeditor);
+		tabbedPane.addTab("", createImageIcon("/icons/pe.gif"), personeditor);
 		tabbedPane.setMnemonicAt(2, KeyEvent.VK_3);
 
 		persontable = new PersonTable(personlist);
-		tabbedPane.addTab("", createImageIcon("../icons/pt.gif"), persontable);
+		tabbedPane.addTab("", createImageIcon("/icons/pt.gif"), persontable);
 		tabbedPane.setMnemonicAt(3, KeyEvent.VK_4);
 
 		sql = new SQL(personlist, database, this);
-		tabbedPane.addTab("", createImageIcon("../icons/sql.gif"), sql);
+		tabbedPane.addTab("", createImageIcon("/icons/sql.gif"), sql);
 		tabbedPane.setMnemonicAt(4, KeyEvent.VK_5);
 
 		sql.setPreferredSize(new Dimension(783, 490));

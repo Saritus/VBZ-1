@@ -7,10 +7,10 @@
     <property name="dir.workspace" value="${dir.buildfile}/../.."/>
     <property name="dir.jarfile" value="${dir.workspace}/VBZ-1/jar"/>
     <target name="create_run_jar">
-        <jar destfile="${dir.jarfile}/main.jar">
+        <jar destfile="${dir.jarfile}/VBZ-1.jar">
             <manifest>
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
-                <attribute name="Rsrc-Main-Class" value="se.Main"/>
+                <attribute name="Rsrc-Main-Class" value="Main"/>
                 <attribute name="Class-Path" value="."/>
                 <attribute name="Rsrc-Class-Path" value="./ mysql-connector-java-5.1.39-bin.jar junit.jar org.hamcrest.core_1.3.0.v201303031735.jar"/>
             </manifest>
