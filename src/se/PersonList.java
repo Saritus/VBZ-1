@@ -3,8 +3,7 @@ package se;
 import java.text.*;
 
 /**
- * 
- * Beschreibung
+ * Stores person objects in a list
  * 
  * @version 1.0 vom 24.03.2016
  * @author Sebastian Mischke

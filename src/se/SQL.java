@@ -6,8 +6,7 @@ import javax.swing.*;
 import javax.swing.event.*;
 
 /**
- * 
- * Beschreibung
+ * Panel for the administration of the MySQL tables
  * 
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

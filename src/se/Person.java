@@ -1,8 +1,7 @@
 package se;
 
 /**
- *
- * Beschreibung
+ * Stores the information about a person
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

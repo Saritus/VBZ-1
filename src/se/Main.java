@@ -5,8 +5,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 
 /**
- *
- * Beschreibung
+ * Main class of the application, which creates the tabbedPane
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

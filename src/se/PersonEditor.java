@@ -6,8 +6,7 @@ import javax.swing.*;
 import javax.swing.text.*;
 
 /**
- *
- * Editor für Personen
+ * Edit information about persons
  *
  * @author Sebastian Mischke
  * @version 1.0 vom 21.01.2016

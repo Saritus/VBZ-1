@@ -3,8 +3,7 @@ package se;
 import java.sql.Date;
 
 /**
- *
- * Beschreibung
+ * Date class, that stores day, month and year.
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke
@@ -27,7 +26,7 @@ public class MyDate extends Date {
 	}
 
 	/**
-	 * Constructor for an empty date (01.01.1900)
+	 * Constructor for an empty date (01.01.0001)
 	 */
 	MyDate() {
 		this(1, 1, 0);

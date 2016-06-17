@@ -5,8 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 /**
- * 
- * Beschreibung
+ * Controller panel for the settings of the program
  * 
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

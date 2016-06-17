@@ -6,8 +6,7 @@ import java.io.*;
 import javax.imageio.*;
 
 /**
- *
- * Beschreibung
+ * Canvas object for the display of persons, their parents and their children
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

@@ -1,8 +1,7 @@
 package se;
 
 /**
- *
- * Beschreibung
+ * Language class with the german labels
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

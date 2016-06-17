@@ -8,8 +8,7 @@ import java.io.*;
 import java.awt.print.*;
 
 /**
- * 
- * Beschreibung
+ * Shows all stored information about the persons in a table
  * 
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke

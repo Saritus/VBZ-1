@@ -2,7 +2,7 @@ package se;
 
 /**
  *
- * Beschreibung
+ * Language class that stores the text information for the buttons and labels
  *
  * @version 1.0 vom 28.01.2016
  * @author Sebastian Mischke
