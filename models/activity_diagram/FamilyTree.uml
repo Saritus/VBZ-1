@@ -7,8 +7,8 @@
       <node xmi:type="uml:OpaqueAction" xmi:id="_aB1H8sQtEeWRQIZ_wLr37A" name="Stammbaum-Button" outgoing="_cWy-ycQuEeWRQIZ_wLr37A" incoming="_cqD5CcQuEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_oOFLQsQtEeWRQIZ_wLr37A" name="Person auswählen" outgoing="_b1khCsQuEeWRQIZ_wLr37A" incoming="_cWy-ycQuEeWRQIZ_wLr37A _jOzYaMQuEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:DecisionNode" xmi:id="_H_7MQ8QuEeWRQIZ_wLr37A" name="Spammbaum speichern?" outgoing="_dAOWScQuEeWRQIZ_wLr37A _hkYd-MQuEeWRQIZ_wLr37A" incoming="_b1khCsQuEeWRQIZ_wLr37A"/>
-      <node xmi:type="uml:OpaqueAction" xmi:id="_JtycQsQuEeWRQIZ_wLr37A" name="Beenden-Button" outgoing="_il3JGcQuEeWRQIZ_wLr37A" incoming="_iALCGMQuEeWRQIZ_wLr37A"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_NG3Q4sQuEeWRQIZ_wLr37A" name="ActivityFinalNode2" incoming="_il3JGcQuEeWRQIZ_wLr37A"/>
+      <node xmi:type="uml:OpaqueAction" xmi:id="_JtycQsQuEeWRQIZ_wLr37A" name="Beenden-Button" outgoing="_il3JGcQuEeWRQIZ_wLr37A"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_NG3Q4sQuEeWRQIZ_wLr37A" name="ActivityFinalNode2" incoming="_il3JGcQuEeWRQIZ_wLr37A _iALCGMQuEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_OD9LQsQuEeWRQIZ_wLr37A" name="Speicher-Icon-Button" outgoing="_dhDyecQuEeWRQIZ_wLr37A" incoming="_dAOWScQuEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_PfAM8sQuEeWRQIZ_wLr37A" name="Dateiname eingeben" outgoing="_d0KUqMQuEeWRQIZ_wLr37A" incoming="_dhDyecQuEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:DecisionNode" xmi:id="_V44gI8QuEeWRQIZ_wLr37A" name="Speichern?" outgoing="_fwO_ycQuEeWRQIZ_wLr37A _gAzyacQuEeWRQIZ_wLr37A" incoming="_d0KUqMQuEeWRQIZ_wLr37A"/>
@@ -59,7 +59,7 @@
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_hkYd-cQuEeWRQIZ_wLr37A"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_hkYd-sQuEeWRQIZ_wLr37A" value="1"/>
       </edge>
-      <edge xmi:type="uml:ControlFlow" xmi:id="_iALCGMQuEeWRQIZ_wLr37A" name="ControlFlow12" source="_ZzYm08QuEeWRQIZ_wLr37A" target="_JtycQsQuEeWRQIZ_wLr37A">
+      <edge xmi:type="uml:ControlFlow" xmi:id="_iALCGMQuEeWRQIZ_wLr37A" name="ControlFlow12" source="_ZzYm08QuEeWRQIZ_wLr37A" target="_NG3Q4sQuEeWRQIZ_wLr37A">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_iALCGcQuEeWRQIZ_wLr37A"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_iALCGsQuEeWRQIZ_wLr37A" value="1"/>
       </edge>

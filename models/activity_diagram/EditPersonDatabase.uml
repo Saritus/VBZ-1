@@ -14,10 +14,10 @@
       <node xmi:type="uml:OpaqueAction" xmi:id="_QJQnssQqEeWRQIZ_wLr37A" name="Übernehmen-Button" outgoing="_Ut-TmMQrEeWRQIZ_wLr37A _L2T54MQsEeWRQIZ_wLr37A" incoming="_UaSimMQrEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_SLN4YsQqEeWRQIZ_wLr37A" name="Beenden-Button" outgoing="_U-TOmMQrEeWRQIZ_wLr37A" incoming="_Ut-TmMQrEeWRQIZ_wLr37A _VbN0GMQrEeWRQIZ_wLr37A _M0pKaMQsEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_3uhhsMQqEeWRQIZ_wLr37A" name="Löschen-Button" outgoing="_RtflIMQrEeWRQIZ_wLr37A" incoming="_RWD8mMQrEeWRQIZ_wLr37A"/>
-      <node xmi:type="uml:ActivityFinalNode" xmi:id="_-pRGQMQqEeWRQIZ_wLr37A" name="ActivityFinalNode1" incoming="_U-TOmMQrEeWRQIZ_wLr37A"/>
+      <node xmi:type="uml:ActivityFinalNode" xmi:id="_-pRGQMQqEeWRQIZ_wLr37A" name="ActivityFinalNode1" incoming="_U-TOmMQrEeWRQIZ_wLr37A _mGOlmTIYEea0o-e894q9rg"/>
       <node xmi:type="uml:OpaqueAction" xmi:id="_JVrloMQrEeWRQIZ_wLr37A" name="Informationen bearbeiten" outgoing="_WMuwl8QrEeWRQIZ_wLr37A" incoming="_V4ciqMQrEeWRQIZ_wLr37A"/>
       <node xmi:type="uml:MergeNode" xmi:id="_DnnaIMQsEeWRQIZ_wLr37A" name="MergeNode1"/>
-      <node xmi:type="uml:DecisionNode" xmi:id="_FAOy4MQsEeWRQIZ_wLr37A" name="Andere Person bearbeiten?" outgoing="_M0pKaMQsEeWRQIZ_wLr37A _N7OX8MQsEeWRQIZ_wLr37A" incoming="_Lk1vaMQsEeWRQIZ_wLr37A _L2T54MQsEeWRQIZ_wLr37A _RtflIMQrEeWRQIZ_wLr37A"/>
+      <node xmi:type="uml:DecisionNode" xmi:id="_FAOy4MQsEeWRQIZ_wLr37A" name="Andere Person bearbeiten?" outgoing="_M0pKaMQsEeWRQIZ_wLr37A _N7OX8MQsEeWRQIZ_wLr37A _mGOlmTIYEea0o-e894q9rg" incoming="_Lk1vaMQsEeWRQIZ_wLr37A _L2T54MQsEeWRQIZ_wLr37A _RtflIMQrEeWRQIZ_wLr37A"/>
       <edge xmi:type="uml:ControlFlow" xmi:id="_O0bGQMQrEeWRQIZ_wLr37A" name="ControlFlow1" source="_eTZAksQpEeWRQIZ_wLr37A" target="_jJyHwsQpEeWRQIZ_wLr37A">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_O0bGQcQrEeWRQIZ_wLr37A" value="true"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_O0bGQsQrEeWRQIZ_wLr37A" value="1"/>
@@ -93,6 +93,10 @@
       <edge xmi:type="uml:ControlFlow" xmi:id="_N7OX8MQsEeWRQIZ_wLr37A" name="ControlFlow19" source="_FAOy4MQsEeWRQIZ_wLr37A" target="_mQmHs8QpEeWRQIZ_wLr37A">
         <guard xmi:type="uml:LiteralBoolean" xmi:id="_N7OX8cQsEeWRQIZ_wLr37A" value="true"/>
         <weight xmi:type="uml:LiteralInteger" xmi:id="_N7OX8sQsEeWRQIZ_wLr37A" value="1"/>
+      </edge>
+      <edge xmi:type="uml:ControlFlow" xmi:id="_mGOlmTIYEea0o-e894q9rg" name="ControlFlow20" source="_FAOy4MQsEeWRQIZ_wLr37A" target="_-pRGQMQqEeWRQIZ_wLr37A">
+        <guard xmi:type="uml:LiteralBoolean" xmi:id="_mGOlmjIYEea0o-e894q9rg"/>
+        <weight xmi:type="uml:LiteralInteger" xmi:id="_mGOlmzIYEea0o-e894q9rg" value="1"/>
       </edge>
     </packagedElement>
   </packagedElement>
