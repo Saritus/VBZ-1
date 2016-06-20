@@ -88,7 +88,6 @@ public class PersonTable extends JPanel {
 				}
 				os.close();
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -96,14 +95,12 @@ public class PersonTable extends JPanel {
 
 	private void jButton2_ActionPerformed(ActionEvent evt) {
 
-		PrinterJob pj = PrinterJob.getPrinterJob();
-		PageFormat pf = pj.pageDialog(pj.defaultPage());
-		if (pj.printDialog()) {
-			try {
-				pj.print();
-			} catch (PrinterException exc) {
-				System.out.println(exc);
-			}
+		//PrinterJob pj = PrinterJob.getPrinterJob();
+		//PageFormat pf = pj.pageDialog(pj.defaultPage());
+		try {
+			jTable1.print();
+		} catch (PrinterException e) {
+			e.printStackTrace();
 		}
 	}
 
