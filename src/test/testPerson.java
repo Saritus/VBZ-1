@@ -11,5 +11,20 @@ public class testPerson {
 		Assert.assertEquals(p.getVorname(), "vorname");
 	}
 
-	// TODO: Tests hinzufügen
+	@Test
+	public void testGetter() throws Exception {
+		Person p = new Person("nachname", "vorname", 'm', new MyDate(9, 11, 1995));
+		Assert.assertEquals(20, p.getAlter());
+		Assert.assertEquals("'Sat Nov 09 00:00:00 CET 3895'", p.getGebdatString());
+	}
+
+	@Test
+	public void testSetter() {
+		Person p = new Person("nachname", "vorname");
+		p.setGebdat(19, 9, 2005);
+		Assert.assertEquals(19, p.getGebdat().getDate());
+		Assert.assertEquals(9, p.getGebdat().getMonth());
+		Assert.assertEquals(2005, p.getGebdat().getYear());
+
+	}
 }

@@ -106,9 +106,16 @@ public class Main extends JPanel {
 	}
 
 	private static PersonList createExamplePersonList() {
-		Person eins = new Person("Meier", "Hans", 'm', new MyDate(9, 11, 1995));
-		Person zwei = new Person("Müller", "Lisa", 'w', new MyDate(1, 11, 1991));
-		Person drei = new Person("Test", "Der", 'm', new MyDate(16, 11, 1992));
+		Person eins = null;
+		Person zwei = null;
+		Person drei = null;
+		try {
+			eins = new Person("Meier", "Hans", 'm', new MyDate(9, 11, 1995));
+			zwei = new Person("Müller", "Lisa", 'w', new MyDate(1, 11, 1991));
+			drei = new Person("Test", "Der", 'm', new MyDate(16, 11, 1992));
+		} catch (Exception e) {
+
+		}
 		zwei.setEhepartner(eins);
 		drei.setVater(eins);
 		Person al = new Person("Lindgren", "Astrid", 'w');

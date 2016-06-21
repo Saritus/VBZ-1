@@ -1,6 +1,6 @@
 package se;
 
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Date class, that stores day, month and year.
@@ -20,16 +20,20 @@ public class MyDate extends Date {
 	 *            month of the date
 	 * @param year
 	 *            year of the date
+	 * @throws Exception
 	 */
-	MyDate(int day, int month, int year) {
-		super(day, month, year - 1900);
+	public MyDate(int day, int month, int year) throws Exception {
+		super(year, month - 1, day);
+		if ((this.getDate() == day) && (this.getMonth() == month - 1) && (this.getYear() == year)) {
+			throw new Exception("Invalid date");
+		}
 	}
 
 	/**
-	 * Constructor for an empty date (01.01.0001)
+	 * Constructor for the current date
 	 */
-	MyDate() {
-		this(1, 1, 0);
+	public MyDate() {
+		super(new Date().getYear() + 1900, new Date().getMonth(), new Date().getDate());
 	}
 
 	/**
@@ -37,8 +41,17 @@ public class MyDate extends Date {
 	 * 
 	 * @param an
 	 *            object of java.sql.Date
+	 * @throws Exception
 	 */
-	MyDate(Date date) {
-		this(date.getDate(), date.getMonth(), date.getYear());
+	public MyDate(Date date) throws Exception {
+		this(date.getYear(), date.getMonth(), date.getDate());
+	}
+
+	public MyDate(long millisec) {
+		super(millisec);
+	}
+
+	public int getMonth() {
+		return super.getMonth() + 1;
 	}
 }

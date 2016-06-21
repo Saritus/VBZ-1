@@ -1,5 +1,7 @@
 package se;
 
+import java.util.Date;
+
 /**
  * Stores the information about a person
  *
@@ -309,6 +311,21 @@ public class Person {
 
 	/**
 	 * 
+	 * @param day
+	 * @param month
+	 * @param year
+	 * @return
+	 */
+	public void setGebdat(int day, int month, int year) {
+		try {
+			this.gebdat = new MyDate(day, month, year);
+		} catch (Exception e) {
+			// e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
 	 * @return identification number
 	 */
 	public int getId() {
@@ -383,8 +400,8 @@ public class Person {
 	 * @return age of the person
 	 */
 	public int getAlter() {
-		// TODO: Calculate age
-		return 18;
+		MyDate now = new MyDate();
+		return now.getYear() - getGebdat().getYear() - (now.getMonth() < getGebdat().getMonth() ? 1 : 0);
 	}
 
 	/**
