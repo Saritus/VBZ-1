@@ -1,3 +1,5 @@
+package se;
+
 /**
  *
  * Language class that stores the text information for the buttons and labels

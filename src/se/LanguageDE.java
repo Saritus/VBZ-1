@@ -1,3 +1,5 @@
+package se;
+
 /**
  * Language class with the german labels
  *

@@ -1,3 +1,5 @@
+package se;
+
 /**
  * Stores the information about a person
  *
