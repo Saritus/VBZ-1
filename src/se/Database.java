@@ -14,9 +14,9 @@ public class Database {
 
 	private final String hostname = "sql7.freemysqlhosting.net";
 	private final String port = "3306";
-	private final String dbname = "sql7114952";
-	private final String user = "sql7114952";
-	private final String password = "BXxdcZ875Y";
+	private final String dbname = "sql7125007";
+	private final String user = "sql7125007";
+	private final String password = "yG4aiTVjUx";
 
 	private String url;
 	private Connection conn = null;
