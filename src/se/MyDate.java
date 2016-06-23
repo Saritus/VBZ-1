@@ -22,11 +22,12 @@ public class MyDate extends Date {
 	 *            year of the date
 	 * @throws Exception
 	 */
-	public MyDate(int day, int month, int year) throws Exception {
+	public MyDate(int day, int month, int year) {
 		super(year - 1900, month - 1, day);
-		if ((this.getDate() == day) && (this.getMonth() == month - 1) && (this.getYear() == year)) {
-			throw new Exception("Invalid date");
-		}
+		/*
+		 * if ((this.getDate() == day) && (this.getMonth() == month - 1) &&
+		 * (this.getYear() == year)) { throw new Exception("Invalid date"); }
+		 */
 	}
 
 	/**
@@ -40,11 +41,11 @@ public class MyDate extends Date {
 	 * TypeCast-Constructor
 	 * 
 	 * @param an
-	 *            object of java.sql.Date
+	 *            object of java.util.Date
 	 * @throws Exception
 	 */
-	public MyDate(Date date) throws Exception {
-		this(date.getYear() + 1900, date.getMonth(), date.getDate());
+	public MyDate(Date date) {
+		this(date.getDate(), date.getMonth() + 1, date.getYear() + 1900);
 	}
 
 	public MyDate(long millisec) {
@@ -55,7 +56,22 @@ public class MyDate extends Date {
 		return super.getMonth() + 1;
 	}
 
+	public int getYear() {
+		return super.getYear() + 1900;
+	}
+
 	public String toString() {
 		return getYear() + "-" + getMonth() + "-" + getDate();
+	}
+
+	public String toFormatString() {
+		return convert(getDate(), 2) + "." + convert(getMonth(), 2) + "." + convert(getYear(), 4);
+	}
+
+	private String convert(int number, int digit) {
+		String buffer = String.valueOf(number);
+		while (buffer.length() != digit)
+			buffer = "0" + buffer;
+		return buffer;
 	}
 }

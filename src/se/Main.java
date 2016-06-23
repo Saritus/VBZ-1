@@ -36,7 +36,7 @@ public class Main extends JPanel {
 		JTabbedPane tabbedPane = new JTabbedPane();
 
 		personlist = new PersonList();
-		personlist = createExamplePersonList();
+		//personlist = this.createExamplePersonList();
 		database = new Database();
 
 		personeditor = new PersonEditor(personlist, this);

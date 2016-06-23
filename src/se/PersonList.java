@@ -216,9 +216,14 @@ public class PersonList {
 	 * @return array of all the names of persons in the personlist that do not
 	 *         have a information about their father nor mother
 	 */
-	public String[] getForefather() {
-		// TODO: return all forefathers
-		return null;
+	public PersonList getForefather() {
+		PersonList pl = new PersonList();
+		for (int i = 0; i < quantity; i++) {
+			if ((list[i].getVater() == null) && (list[i].getVaterid() == -1)) {
+				pl.addPerson(list[i]);
+			}
+		}
+		return pl;
 	}
 
 	/**

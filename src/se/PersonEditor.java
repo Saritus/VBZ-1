@@ -2,6 +2,11 @@ package se;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import javax.swing.*;
 import javax.swing.text.*;
 
@@ -91,7 +96,6 @@ public class PersonEditor extends JPanel {
 		genderbox.setBounds(163, 151, 150, 25);
 		genderbox.addItem("Männlich");
 		genderbox.addItem("Weiblich");
-		genderbox.addItem("Unbekannt");
 		cp.add(genderbox);
 		fatherlabel.setBounds(13, 197, 150, 25);
 		fatherlabel.setText("Vater");
@@ -143,37 +147,30 @@ public class PersonEditor extends JPanel {
 		selectbutton.setRolloverEnabled(true);
 		cp.add(selectbutton);
 		lnamelabel1.setBounds(326, 13, 180, 25);
-		lnamelabel1.setText("Ungültiger Nachname");
 		lnamelabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		lnamelabel1.setForeground(Color.RED);
 		cp.add(lnamelabel1);
 		fnamelabel1.setBounds(326, 59, 180, 25);
-		fnamelabel1.setText("Ungültiger Vorname");
 		fnamelabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		fnamelabel1.setForeground(Color.RED);
 		cp.add(fnamelabel1);
 		genderlabel1.setBounds(326, 151, 180, 25);
-		genderlabel1.setText("Ungültiges Geschlecht");
 		genderlabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		genderlabel1.setForeground(Color.RED);
 		cp.add(genderlabel1);
 		bdaylabel1.setBounds(326, 105, 180, 25);
-		bdaylabel1.setText("Ungültiges Geburtsdatum");
 		bdaylabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		bdaylabel1.setForeground(Color.RED);
 		cp.add(bdaylabel1);
 		fatherlabel1.setBounds(326, 197, 180, 25);
-		fatherlabel1.setText("Ungültiger Vater");
 		fatherlabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		fatherlabel1.setForeground(Color.RED);
 		cp.add(fatherlabel1);
 		motherlabel1.setBounds(326, 243, 180, 25);
-		motherlabel1.setText("Ungültige Mutter");
 		motherlabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		motherlabel1.setForeground(Color.RED);
 		cp.add(motherlabel1);
 		spouselabel1.setBounds(326, 289, 180, 25);
-		spouselabel1.setText("Ungültiger Ehepartner");
 		spouselabel1.setFont(new Font("Dialog", Font.PLAIN, 12));
 		spouselabel1.setForeground(Color.RED);
 		cp.add(spouselabel1);
@@ -191,25 +188,49 @@ public class PersonEditor extends JPanel {
 
 	private void newbutton_ActionPerformed(ActionEvent evt) {
 		// TODO Neue Person erstellen
-		System.out.println(gebdattf.getText());
+		// Person p = new Person(lnametf.getText(), fnametf.getText(),
+		// geschlecht, gebdat, vater, mutter, ehepartner);
+
+		mainw.updatePanels();
 	}
 
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
-			System.out.println(jList1.getSelectedIndex());
 			selected = personlist.getList()[jList1.getSelectedIndex()];
-			System.out.println(selected.getName());
 		}
 		lnametf.setText(selected.getNachname());
 		fnametf.setText(selected.getVorname());
-		// gebdattf.setText(selected.getGebdat());
+		gebdattf.setText(selected.getGebdat().toFormatString());
+		switch (selected.getGeschlecht()) {
+		case 'm':
+			genderbox.setSelectedIndex(0);
+			break;
+		case 'w':
+			genderbox.setSelectedIndex(1);
+			break;
+		}
 		// TODO: Alle Informationen der Person in die Felder eintragen
 	}
 
 	private void acceptbutton_ActionPerformed(ActionEvent evt) {
+		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+		try {
+			selected.setGebdat(new MyDate(formatter.parse(gebdattf.getText())));
+		} catch (ParseException e) {
+			bdaylabel1.setText("Ungültiges Datum");
+			gebdattf.setText(selected.getGebdat().toFormatString());
+			return;
+		}
 		selected.setNachname(lnametf.getText());
 		selected.setVorname(fnametf.getText());
-
+		switch (genderbox.getSelectedItem().toString()) {
+		case "Männlich":
+			selected.setGeschlecht('m');
+			break;
+		case "Weiblich":
+			selected.setGeschlecht('w');
+			break;
+		}
 		mainw.updatePanels();
 
 	}
