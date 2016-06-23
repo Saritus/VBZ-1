@@ -2,7 +2,6 @@ package se;
 
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Date;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,21 +23,21 @@ public class PersonEditor extends JPanel {
 	private JButton newbutton = new JButton();
 	private JTextField lnametf = new JTextField();
 	private JTextField fnametf = new JTextField();
-	private JComboBox genderbox = new JComboBox();
-	private DefaultComboBoxModel genderboxModel = new DefaultComboBoxModel();
+	private JComboBox<String> genderbox = new JComboBox<String>();
+	private DefaultComboBoxModel<String> genderboxModel = new DefaultComboBoxModel<String>();
 	private JLabel fatherlabel = new JLabel();
-	private JComboBox fatherbox = new JComboBox();
-	private DefaultComboBoxModel fatherboxModel = new DefaultComboBoxModel();
+	private JComboBox<Person> fatherbox = new JComboBox<Person>();
+	private DefaultComboBoxModel<Person> fatherboxModel = new DefaultComboBoxModel<Person>();
 	private JLabel motherlabel = new JLabel();
-	private JComboBox motherbox = new JComboBox();
-	private DefaultComboBoxModel motherboxModel = new DefaultComboBoxModel();
+	private JComboBox<Person> motherbox = new JComboBox<Person>();
+	private DefaultComboBoxModel<Person> motherboxModel = new DefaultComboBoxModel<Person>();
 	private JLabel spouselabel = new JLabel();
-	private JComboBox spousebox = new JComboBox();
-	private DefaultComboBoxModel spouseboxModel = new DefaultComboBoxModel();
+	private JComboBox<Person> spousebox = new JComboBox<Person>();
+	private DefaultComboBoxModel<Person> spouseboxModel = new DefaultComboBoxModel<Person>();
 	private JButton acceptbutton = new JButton();
 	private JButton cancelbutton = new JButton();
-	private JList jList1 = new JList();
-	private DefaultListModel jList1Model = new DefaultListModel();
+	private JList<String> jList1 = new JList<String>();
+	private DefaultListModel<String> jList1Model = new DefaultListModel<String>();
 	private JScrollPane jList1ScrollPane = new JScrollPane(jList1);
 	private JButton selectbutton = new JButton();
 	private JLabel lnamelabel1 = new JLabel();
@@ -191,6 +190,29 @@ public class PersonEditor extends JPanel {
 		// Person p = new Person(lnametf.getText(), fnametf.getText(),
 		// geschlecht, gebdat, vater, mutter, ehepartner);
 
+		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+		MyDate geb;
+		try {
+			geb = (new MyDate(formatter.parse(gebdattf.getText())));
+		} catch (ParseException e) {
+			bdaylabel1.setText("Ungültiges Datum");
+			return;
+		}
+		char gen;
+		switch (genderbox.getSelectedItem().toString()) {
+		case "Männlich":
+			gen = 'm';
+			break;
+		case "Weiblich":
+			gen = 'w';
+			break;
+		default:
+			gen = 'u';
+			break;
+		}
+		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb);
+		personlist.addPerson(p);
+
 		mainw.updatePanels();
 	}
 
@@ -231,6 +253,7 @@ public class PersonEditor extends JPanel {
 			selected.setGeschlecht('w');
 			break;
 		}
+		selected.setVater((Person) fatherbox.getSelectedItem());
 		mainw.updatePanels();
 
 	}
@@ -246,18 +269,24 @@ public class PersonEditor extends JPanel {
 
 	public void updateList() {
 		jList1Model.clear();
+		fatherboxModel.removeAllElements();
+		motherboxModel.removeAllElements();
+		spouseboxModel.removeAllElements();
 		String[] infos = personlist.getStringList();
 		for (int i = 0; i < personlist.getQuantity(); i++) {
 			jList1Model.addElement(infos[i]);
 		}
 
-		for (String name : personlist.getMales().getNames())
+		fatherboxModel.addElement(null);
+		for (Person name : personlist.getMales().getList())
 			fatherboxModel.addElement(name);
 
-		for (String name : personlist.getFemales().getNames())
+		motherboxModel.addElement(null);
+		for (Person name : personlist.getFemales().getList())
 			motherboxModel.addElement(name);
 
-		for (String name : personlist.getNames())
+		spouseboxModel.addElement(null);
+		for (Person name : personlist.getList())
 			spouseboxModel.addElement(name);
 	}
 

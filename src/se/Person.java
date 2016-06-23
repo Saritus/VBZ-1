@@ -1,7 +1,5 @@
 package se;
 
-import java.util.Date;
-
 /**
  * Stores the information about a person
  *
@@ -498,6 +496,10 @@ public class Person {
 		if (ehepartner != null) {
 			ehepartnerid = ehepartner.id;
 		}
+	}
+
+	public String toString() {
+		return getName();
 	}
 
 }

@@ -13,8 +13,8 @@ import javax.swing.event.*;
  */
 
 public class SQL extends JPanel {
-	private JList jList1 = new JList();
-	private DefaultListModel jList1Model = new DefaultListModel();
+	private JList<String> jList1 = new JList<String>();
+	private DefaultListModel<String> jList1Model = new DefaultListModel<String>();
 	private JScrollPane jList1ScrollPane = new JScrollPane(jList1);
 	private JButton savebutton = new JButton();
 	private JButton loadbutton = new JButton();

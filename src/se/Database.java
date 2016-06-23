@@ -124,7 +124,7 @@ public class Database {
 	 * @param jList1Model
 	 *            a listmodel where the loaded tablenames shall be stored
 	 */
-	public void getTables(DefaultListModel jList1Model) {
+	public void getTables(DefaultListModel<String> jList1Model) {
 		try {
 			conn = DriverManager.getConnection(url, user, password);
 			Statement stmt = conn.createStatement();

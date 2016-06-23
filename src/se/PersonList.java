@@ -44,7 +44,7 @@ public class PersonList {
 	 * Constructor for an empty personlist
 	 */
 	public PersonList() {
-		this(null, 0);
+		this(new Person[0], 0);
 	}
 
 	/**
@@ -92,6 +92,15 @@ public class PersonList {
 	public Person getPerson(int id) {
 		// TODO: search and return Person with id, if not found, return null
 		return list[id];
+	}
+
+	public int getPersonID(String name) {
+		for (int i = 0; i < quantity; i++) {
+			if (list[i].getName() == name) {
+				return i;
+			}
+		}
+		return -1;
 	}
 
 	/**

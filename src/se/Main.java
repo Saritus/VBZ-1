@@ -3,9 +3,6 @@ package se;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 
 /**
  * Main class of the application, which creates the tabbedPane
