@@ -21,7 +21,6 @@ public class RSViewer extends JPanel {
 	private JButton savebutton = new JButton();
 	private JButton selectbutton = new JButton();
 	public PersonList personlist;
-	private Person selected;
 
 	/**
 	 * Constructor for a new RSViewer panel
@@ -88,7 +87,6 @@ public class RSViewer extends JPanel {
 
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
-			selected = personlist.getList()[jList1.getSelectedIndex()];
 			canvas.id = jList1.getSelectedIndex();
 			canvas.repaint();
 		}
