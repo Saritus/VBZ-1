@@ -12,6 +12,7 @@ import javax.swing.event.*;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class SQL extends JPanel {
 	private JList<String> jList1 = new JList<String>();
 	private DefaultListModel<String> jList1Model = new DefaultListModel<String>();

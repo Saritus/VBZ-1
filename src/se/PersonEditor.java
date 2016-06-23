@@ -15,6 +15,7 @@ import javax.swing.text.*;
  * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
+@SuppressWarnings("serial")
 public class PersonEditor extends JPanel {
 	private JLabel lnamelabel = new JLabel();
 	private JLabel fnamelabel = new JLabel();
@@ -47,8 +48,7 @@ public class PersonEditor extends JPanel {
 	private JLabel fatherlabel1 = new JLabel();
 	private JLabel motherlabel1 = new JLabel();
 	private JLabel spouselabel1 = new JLabel();
-	private JFormattedTextField gebdattf = new JFormattedTextField(
-			createFormatter("##.##.####"));
+	private JFormattedTextField gebdattf = new JFormattedTextField(createFormatter("##.##.####"));
 	public Main mainw;
 	public PersonList personlist;
 	private Person selected;
@@ -188,6 +188,7 @@ public class PersonEditor extends JPanel {
 	private void cancelbutton_ActionPerformed(ActionEvent evt) {
 		// TODO Ausgewählte Person löschen
 		personlist.removePerson(selected.getId());
+		selected = new Person("", "");
 		mainw.updatePanels();
 	}
 
@@ -217,11 +218,10 @@ public class PersonEditor extends JPanel {
 			gen = 'u';
 			break;
 		}
-		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb,
-				(Person) fatherbox.getSelectedItem(),
-				(Person) motherbox.getSelectedItem(),
-				(Person) spousebox.getSelectedItem());
+		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb, (Person) fatherbox.getSelectedItem(),
+				(Person) motherbox.getSelectedItem(), (Person) spousebox.getSelectedItem());
 		personlist.addPerson(p);
+		selected = p;
 
 		mainw.updatePanels();
 	}
@@ -275,24 +275,20 @@ public class PersonEditor extends JPanel {
 			selected.setGeschlecht('w');
 			break;
 		}
-		if ((fatherbox.getSelectedIndex() == 0)
-				|| (fatherbox.getSelectedIndex() == -1)) {
+		if ((fatherbox.getSelectedIndex() == 0) || (fatherbox.getSelectedIndex() == -1)) {
 			selected.setVater(null);
 		} else {
-			selected.setVater(males[fatherbox.getSelectedIndex() - 2]);
+			selected.setVater((Person) fatherbox.getSelectedItem());
 		}
-		if ((motherbox.getSelectedIndex() == 0)
-				|| (motherbox.getSelectedIndex() == -1)) {
+		if ((motherbox.getSelectedIndex() == 0) || (motherbox.getSelectedIndex() == -1)) {
 			selected.setMutter(null);
 		} else {
-			selected.setMutter(females[motherbox.getSelectedIndex() - 2]);
+			selected.setMutter((Person) motherbox.getSelectedItem());
 		}
-		if ((spousebox.getSelectedIndex() == 0)
-				|| (spousebox.getSelectedIndex() == -1)) {
+		if ((spousebox.getSelectedIndex() == 0) || (spousebox.getSelectedIndex() == -1)) {
 			selected.setEhepartner(null);
 		} else {
-			selected.setEhepartner(personlist.getList()[spousebox
-					.getSelectedIndex()]);
+			selected.setEhepartner((Person) spousebox.getSelectedItem());
 		}
 		personlist.fillPersonInfo();
 		mainw.updatePanels();
@@ -333,9 +329,10 @@ public class PersonEditor extends JPanel {
 		for (Person name : personlist.getList())
 			spouseboxModel.addElement(name);
 
-		fatherbox.setSelectedIndex(selected.getVaterid() + 1);
-		motherbox.setSelectedIndex(selected.getMutterid() + 1);
-		spousebox.setSelectedIndex(selected.getEhepartnerid() + 1);
+		fatherbox.setSelectedItem(selected.getVater());
+		motherbox.setSelectedItem(selected.getMutter());
+		spousebox.setSelectedItem(selected.getEhepartner());
+
 	}
 
 	/**

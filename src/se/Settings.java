@@ -11,6 +11,7 @@ import javax.swing.*;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class Settings extends JPanel {
 	private JRadioButton deutschrb = new JRadioButton();
 	private JRadioButton englishrb = new JRadioButton();

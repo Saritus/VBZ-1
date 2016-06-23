@@ -184,6 +184,9 @@ public class PersonList {
 	 */
 	public void fillPersonInfo() {
 		for (int i = 0; i < quantity; i++) {
+			list[i].setId(i);
+		}
+		for (int i = 0; i < quantity; i++) {
 			// Vater
 			if (list[i].getVater() != null)
 				list[i].setVaterid(list[i].getVater().getId());

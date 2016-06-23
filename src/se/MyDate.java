@@ -9,6 +9,7 @@ import java.util.Date;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class MyDate extends Date {
 
 	/**

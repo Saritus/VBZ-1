@@ -11,6 +11,7 @@ import java.awt.event.KeyEvent;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class Main extends JPanel {
 
 	public Database database;
@@ -103,6 +104,7 @@ public class Main extends JPanel {
 		frame.setLocation(x, y);
 	}
 
+	@SuppressWarnings("unused")
 	private static PersonList createExamplePersonList() {
 		Person eins = null;
 		Person zwei = null;

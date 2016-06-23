@@ -11,6 +11,7 @@ import javax.imageio.*;
  * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
+@SuppressWarnings("serial")
 class MyCanvas extends Canvas {
 
 	public PersonList personlist;
@@ -52,7 +53,6 @@ class MyCanvas extends Canvas {
 
 			int index = 0;
 			for (Person p : personlist.getChildren(id).getList()) {
-				System.out.println(p.getNachname());
 				drawPerson(g, p.getVorname(), p.getNachname(), 125 * index + 13, 358);
 				g.drawLine(260, 248, 125 * index + 73, 358);
 				index++;

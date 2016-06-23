@@ -12,6 +12,7 @@ import java.io.*;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class RSViewer extends JPanel {
 	public MyCanvas canvas;
 	private JList<String> jList1 = new JList<String>();
@@ -87,9 +88,7 @@ public class RSViewer extends JPanel {
 
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
-			System.out.println(jList1.getSelectedIndex());
 			selected = personlist.getList()[jList1.getSelectedIndex()];
-			System.out.println(selected.getName());
 			canvas.id = jList1.getSelectedIndex();
 			canvas.repaint();
 		}

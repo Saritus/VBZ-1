@@ -14,6 +14,7 @@ import java.awt.print.*;
  * @author Sebastian Mischke
  */
 
+@SuppressWarnings("serial")
 public class PersonTable extends JPanel {
 	private JTable jTable1 = new JTable(30, 6);
 	private DefaultTableModel jTable1Model = (DefaultTableModel) jTable1.getModel();
