@@ -25,6 +25,5 @@ public class testPerson {
 		Assert.assertEquals(19, p.getGebdat().getDate());
 		Assert.assertEquals(9, p.getGebdat().getMonth());
 		Assert.assertEquals(2005, p.getGebdat().getYear());
-
 	}
 }

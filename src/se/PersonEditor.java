@@ -11,7 +11,7 @@ import javax.swing.text.*;
 
 /**
  * Edit information about persons
- *
+ * 
  * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
@@ -47,7 +47,8 @@ public class PersonEditor extends JPanel {
 	private JLabel fatherlabel1 = new JLabel();
 	private JLabel motherlabel1 = new JLabel();
 	private JLabel spouselabel1 = new JLabel();
-	private JFormattedTextField gebdattf = new JFormattedTextField(createFormatter("##.##.####"));
+	private JFormattedTextField gebdattf = new JFormattedTextField(
+			createFormatter("##.##.####"));
 	public Main mainw;
 	public PersonList personlist;
 	private Person selected;
@@ -194,13 +195,14 @@ public class PersonEditor extends JPanel {
 		// TODO Neue Person erstellen
 		// Person p = new Person(lnametf.getText(), fnametf.getText(),
 		// geschlecht, gebdat, vater, mutter, ehepartner);
-
+		bdaylabel1.setText("");
 		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 		MyDate geb;
 		try {
 			geb = (new MyDate(formatter.parse(gebdattf.getText())));
 		} catch (ParseException e) {
 			bdaylabel1.setText("Ungültiges Datum");
+			mainw.updatePanels();
 			return;
 		}
 		char gen;
@@ -215,8 +217,10 @@ public class PersonEditor extends JPanel {
 			gen = 'u';
 			break;
 		}
-		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb, (Person) fatherbox.getSelectedItem(),
-				(Person) motherbox.getSelectedItem(), (Person) spousebox.getSelectedItem());
+		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb,
+				(Person) fatherbox.getSelectedItem(),
+				(Person) motherbox.getSelectedItem(),
+				(Person) spousebox.getSelectedItem());
 		personlist.addPerson(p);
 
 		mainw.updatePanels();
@@ -225,7 +229,7 @@ public class PersonEditor extends JPanel {
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
 			selected = personlist.getList()[jList1.getSelectedIndex()];
-			// selected.setId(jList1.getSelectedIndex());
+			selected.setId(jList1.getSelectedIndex());
 		} else {
 			return;
 		}
@@ -252,6 +256,7 @@ public class PersonEditor extends JPanel {
 	}
 
 	private void acceptbutton_ActionPerformed(ActionEvent evt) {
+		bdaylabel1.setText("");
 		DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
 		try {
 			selected.setGebdat(new MyDate(formatter.parse(gebdattf.getText())));
@@ -270,20 +275,24 @@ public class PersonEditor extends JPanel {
 			selected.setGeschlecht('w');
 			break;
 		}
-		if ((fatherbox.getSelectedIndex() == 0) || (fatherbox.getSelectedIndex() == -1)) {
+		if ((fatherbox.getSelectedIndex() == 0)
+				|| (fatherbox.getSelectedIndex() == -1)) {
 			selected.setVater(null);
 		} else {
 			selected.setVater(males[fatherbox.getSelectedIndex() - 2]);
 		}
-		if ((motherbox.getSelectedIndex() == 0) || (motherbox.getSelectedIndex() == -1)) {
+		if ((motherbox.getSelectedIndex() == 0)
+				|| (motherbox.getSelectedIndex() == -1)) {
 			selected.setMutter(null);
 		} else {
 			selected.setMutter(females[motherbox.getSelectedIndex() - 2]);
 		}
-		if ((spousebox.getSelectedIndex() == 0) || (spousebox.getSelectedIndex() == -1)) {
+		if ((spousebox.getSelectedIndex() == 0)
+				|| (spousebox.getSelectedIndex() == -1)) {
 			selected.setEhepartner(null);
 		} else {
-			selected.setEhepartner(personlist.getList()[spousebox.getSelectedIndex()]);
+			selected.setEhepartner(personlist.getList()[spousebox
+					.getSelectedIndex()]);
 		}
 		personlist.fillPersonInfo();
 		mainw.updatePanels();
