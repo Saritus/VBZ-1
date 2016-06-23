@@ -41,17 +41,20 @@ class MyCanvas extends Canvas {
 			if (personlist.getPerson(id).getVater() != null) {
 				drawPerson(g, personlist.getPerson(id).getVater().getVorname(),
 						personlist.getPerson(id).getVater().getNachname(), 13, 13);
+				g.drawLine(73, 76, 260, 185);
 			}
 			// Mother
 			if (personlist.getPerson(id).getMutter() != null) {
 				drawPerson(g, personlist.getPerson(id).getMutter().getVorname(),
 						personlist.getPerson(id).getMutter().getNachname(), 388, 13);
+				g.drawLine(448, 76, 260, 185);
 			}
 
 			int index = 0;
 			for (Person p : personlist.getChildren(id).getList()) {
 				System.out.println(p.getNachname());
-				drawPerson(g, p.getVorname(), p.getNachname(), 133 * index + 13, 358);
+				drawPerson(g, p.getVorname(), p.getNachname(), 125 * index + 13, 358);
+				g.drawLine(260, 248, 125 * index + 73, 358);
 				index++;
 			}
 			// Connections
