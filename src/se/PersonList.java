@@ -155,6 +155,18 @@ public class PersonList {
 		list = plist;
 	}
 
+	public void removePerson(int id) {
+		Person[] plist = new Person[quantity - 1];
+		for (int i = 0; i < id; i++) {
+			plist[i] = list[i];
+		}
+		for (int i = id; i < quantity - 1; i++) {
+			plist[i] = list[i + 1];
+		}
+		quantity--;
+		list = plist;
+	}
+
 	/**
 	 * 
 	 * @param p

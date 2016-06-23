@@ -22,6 +22,7 @@ public class MyDate extends Date {
 	 *            year of the date
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	public MyDate(int day, int month, int year) {
 		super(year - 1900, month - 1, day);
 		/*
@@ -33,6 +34,7 @@ public class MyDate extends Date {
 	/**
 	 * Constructor for the current date
 	 */
+	@SuppressWarnings("deprecation")
 	public MyDate() {
 		super(new Date().getYear(), new Date().getMonth(), new Date().getDate());
 	}
@@ -44,6 +46,7 @@ public class MyDate extends Date {
 	 *            object of java.util.Date
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	public MyDate(Date date) {
 		this(date.getDate(), date.getMonth() + 1, date.getYear() + 1900);
 	}
@@ -52,10 +55,17 @@ public class MyDate extends Date {
 		super(millisec);
 	}
 
+	@SuppressWarnings("deprecation")
+	public int getDate() {
+		return super.getDate();
+	}
+
+	@SuppressWarnings("deprecation")
 	public int getMonth() {
 		return super.getMonth() + 1;
 	}
 
+	@SuppressWarnings("deprecation")
 	public int getYear() {
 		return super.getYear() + 1900;
 	}

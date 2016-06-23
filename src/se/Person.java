@@ -87,6 +87,28 @@ public class Person {
 
 	/**
 	 * 
+	 * @param nachname
+	 *            lastname
+	 * @param vorname
+	 *            surname
+	 * @param geschlecht
+	 *            gender
+	 * @param gebdat
+	 *            bithday
+	 * @param vater
+	 *            object of the father
+	 * @param mutter
+	 *            object of the mother
+	 * @param ehepartner
+	 *            object of the spouse
+	 */
+	public Person(String nachname, String vorname, char geschlecht, MyDate gebdat, Person vater, Person mutter,
+			Person ehepartner) {
+		this(-1, nachname, vorname, geschlecht, gebdat, vater, -1, mutter, -1, ehepartner, -1);
+	}
+
+	/**
+	 * 
 	 * @param id
 	 *            identification number
 	 * @param nachname

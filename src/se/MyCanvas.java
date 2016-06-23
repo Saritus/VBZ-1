@@ -33,20 +33,20 @@ class MyCanvas extends Canvas {
 		g.setFont(new Font("Times New Roman", 1, 17));
 		int x = 120, y = 63;
 		// Main
-		g.drawRect(260 - x / 2, 217 - y / 2, x, y); // Main
-		g.drawString("Vorname", 273 - x / 2, 243 - y / 2);
-		g.drawString("Nachname", 273 - x / 2, 263 - y / 2);
+		drawPerson(g, "vorname", "nachname", 200, 200);
 		// Father
-		g.drawRect(13, 13, x, y);
-		g.drawString("Vorname", 26, 39);
-		g.drawString("Nachname", 26, 59);
+		drawPerson(g, "vorname", "nachname", 13, 13);
 		// Mother
-		g.drawRect(508 - x, 13, x, y);
-		g.drawString("Vorname", 521 - x, 39);
-		g.drawString("Nachname", 521 - x, 59);
+		drawPerson(g, "vorname", "nachname", 388, 13);
 		// Connections
 		g.drawLine(260, (217 - y / 2) - (13 + y / 2), 260, 279 - (int) 1.5 * y);
 		g.drawLine(13 + x / 2, (217 - y / 2) - (13 + y), (508 - x / 2), (217 - y / 2) - (13 + y));
+	}
+
+	private void drawPerson(Graphics g, String vorname, String nachname, int x, int y) {
+		g.drawRect(x, y, 120, 63);
+		g.drawString(vorname, x + 13, y + 23);
+		g.drawString(nachname, x + 13, y + 43);
 	}
 
 	/**

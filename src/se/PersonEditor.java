@@ -183,6 +183,8 @@ public class PersonEditor extends JPanel {
 
 	private void cancelbutton_ActionPerformed(ActionEvent evt) {
 		// TODO Ausgewählte Person löschen
+		personlist.removePerson(selected.getId());
+		mainw.updatePanels();
 	}
 
 	private void newbutton_ActionPerformed(ActionEvent evt) {
@@ -210,7 +212,8 @@ public class PersonEditor extends JPanel {
 			gen = 'u';
 			break;
 		}
-		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb);
+		Person p = new Person(lnametf.getText(), fnametf.getText(), gen, geb, (Person) fatherbox.getSelectedItem(),
+				(Person) motherbox.getSelectedItem(), (Person) spousebox.getSelectedItem());
 		personlist.addPerson(p);
 
 		mainw.updatePanels();
@@ -219,10 +222,15 @@ public class PersonEditor extends JPanel {
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
 			selected = personlist.getList()[jList1.getSelectedIndex()];
+			// selected.setId(jList1.getSelectedIndex());
+		} else {
+			return;
 		}
 		lnametf.setText(selected.getNachname());
 		fnametf.setText(selected.getVorname());
-		gebdattf.setText(selected.getGebdat().toFormatString());
+		if (selected.getGebdat() != null) {
+			gebdattf.setText(selected.getGebdat().toFormatString());
+		}
 		switch (selected.getGeschlecht()) {
 		case 'm':
 			genderbox.setSelectedIndex(0);
@@ -231,6 +239,12 @@ public class PersonEditor extends JPanel {
 			genderbox.setSelectedIndex(1);
 			break;
 		}
+
+		// System.out.println(selected.getVaterid() + " " +
+		// selected.getMutterid() + " " + selected.getEhepartnerid());
+		fatherbox.setSelectedIndex(selected.getVaterid() + 1);
+		motherbox.setSelectedIndex(selected.getMutterid() + 1);
+		spousebox.setSelectedIndex(selected.getEhepartnerid() + 1);
 		// TODO: Alle Informationen der Person in die Felder eintragen
 	}
 
@@ -254,6 +268,9 @@ public class PersonEditor extends JPanel {
 			break;
 		}
 		selected.setVater((Person) fatherbox.getSelectedItem());
+		selected.setMutter((Person) motherbox.getSelectedItem());
+		selected.setEhepartner((Person) spousebox.getSelectedItem());
+		personlist.fillPersonInfo();
 		mainw.updatePanels();
 
 	}
@@ -288,6 +305,10 @@ public class PersonEditor extends JPanel {
 		spouseboxModel.addElement(null);
 		for (Person name : personlist.getList())
 			spouseboxModel.addElement(name);
+
+		fatherbox.setSelectedIndex(selected.getVaterid() + 1);
+		motherbox.setSelectedIndex(selected.getMutterid() + 1);
+		spousebox.setSelectedIndex(selected.getEhepartnerid() + 1);
 	}
 
 	/**
