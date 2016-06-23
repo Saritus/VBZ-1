@@ -34,7 +34,7 @@ public class RSViewer extends JPanel {
 		cp.setLayout(null);
 		personlist = pl;
 
-		canvas = new MyCanvas();
+		canvas = new MyCanvas(personlist);
 		canvas.setBounds(13, 13, 521, 434);
 		canvas.setBackground(Color.WHITE);
 		cp.add(canvas);
@@ -74,7 +74,6 @@ public class RSViewer extends JPanel {
 		cp.add(selectbutton);
 
 		updateList();
-		drawBasic();
 		setVisible(true);
 	}
 
@@ -91,6 +90,8 @@ public class RSViewer extends JPanel {
 			System.out.println(jList1.getSelectedIndex());
 			selected = personlist.getList()[jList1.getSelectedIndex()];
 			System.out.println(selected.getName());
+			canvas.id = jList1.getSelectedIndex();
+			canvas.repaint();
 		}
 	}
 
@@ -103,15 +104,6 @@ public class RSViewer extends JPanel {
 		for (int i = 0; i < personlist.getQuantity(); i++) {
 			jList1Model.addElement(infos[i]);
 		}
-	}
-
-	/**
-	 * Dunno myself TODO: WHY?
-	 * 
-	 * @return a rnd number (rolled a dice)
-	 */
-	public int drawBasic() {
-		return 3;
 	}
 
 	/**

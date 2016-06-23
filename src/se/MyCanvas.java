@@ -13,11 +13,15 @@ import javax.imageio.*;
  */
 class MyCanvas extends Canvas {
 
+	public PersonList personlist;
+	public int id = -1;
+
 	/**
 	 * Constructor
 	 */
-	public MyCanvas() {
+	public MyCanvas(PersonList pl) {
 		super();
+		personlist = pl;
 	}
 
 	/**
@@ -26,21 +30,36 @@ class MyCanvas extends Canvas {
 	public void paint(Graphics g) {
 		g.setColor(Color.WHITE);
 		g.fillRect(0, 0, this.getWidth(), this.getHeight());
-		g.setColor(Color.YELLOW);
-		g.drawLine(260, 0, 260, 434); // Vertikal
-		g.drawLine(0, 217, 521, 217); // Horizontal
-		g.setColor(Color.BLACK);
-		g.setFont(new Font("Times New Roman", 1, 17));
-		int x = 120, y = 63;
-		// Main
-		drawPerson(g, "vorname", "nachname", 200, 200);
-		// Father
-		drawPerson(g, "vorname", "nachname", 13, 13);
-		// Mother
-		drawPerson(g, "vorname", "nachname", 388, 13);
-		// Connections
-		g.drawLine(260, (217 - y / 2) - (13 + y / 2), 260, 279 - (int) 1.5 * y);
-		g.drawLine(13 + x / 2, (217 - y / 2) - (13 + y), (508 - x / 2), (217 - y / 2) - (13 + y));
+		if (id != -1) {
+			// Vertikal height:434
+			// Horizontal width:521
+			g.setColor(Color.BLACK);
+			g.setFont(new Font("Times New Roman", 1, 17));
+			// Main
+			drawPerson(g, personlist.getPerson(id).getVorname(), personlist.getPerson(id).getNachname(), 200, 185);
+			// Father
+			if (personlist.getPerson(id).getVater() != null) {
+				drawPerson(g, personlist.getPerson(id).getVater().getVorname(),
+						personlist.getPerson(id).getVater().getNachname(), 13, 13);
+			}
+			// Mother
+			if (personlist.getPerson(id).getMutter() != null) {
+				drawPerson(g, personlist.getPerson(id).getMutter().getVorname(),
+						personlist.getPerson(id).getMutter().getNachname(), 388, 13);
+			}
+
+			int index = 0;
+			for (Person p : personlist.getChildren(id).getList()) {
+				System.out.println(p.getNachname());
+				drawPerson(g, p.getVorname(), p.getNachname(), 133 * index + 13, 358);
+				index++;
+			}
+			// Connections
+			// g.drawLine(260, (217 - y / 2) - (13 + y / 2), 260, 279 - (int)
+			// 1.5 * y);
+			// g.drawLine(13 + x / 2, (217 - y / 2) - (13 + y), (508 - x / 2),
+			// (217 - y / 2) - (13 + y));
+		}
 	}
 
 	private void drawPerson(Graphics g, String vorname, String nachname, int x, int y) {

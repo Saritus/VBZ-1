@@ -247,6 +247,16 @@ public class PersonList {
 		return pl;
 	}
 
+	public PersonList getChildren(int id) {
+		PersonList pl = new PersonList();
+		for (int i = 0; i < quantity; i++) {
+			if ((list[i].getVater() == list[id]) || (list[i].getVaterid() == id)) {
+				pl.addPerson(list[i]);
+			}
+		}
+		return pl;
+	}
+
 	/**
 	 * 
 	 * @return
