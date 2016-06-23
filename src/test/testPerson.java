@@ -15,7 +15,7 @@ public class testPerson {
 	public void testGetter() throws Exception {
 		Person p = new Person("nachname", "vorname", 'm', new MyDate(9, 11, 1995));
 		Assert.assertEquals(20, p.getAlter());
-		Assert.assertEquals("'Sat Nov 09 00:00:00 CET 3895'", p.getGebdatString());
+		Assert.assertEquals("'1995-11-9'", p.getGebdatString());
 	}
 
 	@Test

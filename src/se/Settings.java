@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Controller panel for the settings of the program
  * 
- * @version 1.0 vom 28.01.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 
@@ -32,11 +32,11 @@ public class Settings extends JPanel {
 		cp.setLayout(null);
 		mainw = m;
 
-		deutschrb.setBounds(346, 120, 100, 25);
+		deutschrb.setBounds(346, 120, 200, 25);
 		deutschrb.setText("Deutsch");
 		deutschrb.setOpaque(false);
 		cp.add(deutschrb);
-		englishrb.setBounds(346, 150, 100, 25);
+		englishrb.setBounds(346, 150, 200, 25);
 		englishrb.setText("English");
 		englishrb.setOpaque(false);
 		buttonGroup1.add(deutschrb);

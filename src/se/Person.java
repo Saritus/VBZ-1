@@ -3,7 +3,7 @@ package se;
 /**
  * Stores the information about a person
  *
- * @version 1.0 vom 28.01.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 
@@ -332,9 +332,11 @@ public class Person {
 	/**
 	 * 
 	 * @param day
+	 *            birthday
 	 * @param month
+	 *            birthmonth
 	 * @param year
-	 * @return
+	 *            birthyear
 	 */
 	public void setGebdat(int day, int month, int year) {
 		try {

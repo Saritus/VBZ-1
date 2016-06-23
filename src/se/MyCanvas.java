@@ -8,7 +8,7 @@ import javax.imageio.*;
 /**
  * Canvas object for the display of persons, their parents and their children
  *
- * @version 1.0 vom 28.01.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 class MyCanvas extends Canvas {

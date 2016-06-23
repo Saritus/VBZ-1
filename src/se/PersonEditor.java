@@ -12,8 +12,8 @@ import javax.swing.text.*;
 /**
  * Edit information about persons
  *
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
- * @version 1.0 vom 21.01.2016
  */
 public class PersonEditor extends JPanel {
 	private JLabel lnamelabel = new JLabel();
@@ -51,6 +51,9 @@ public class PersonEditor extends JPanel {
 	public Main mainw;
 	public PersonList personlist;
 	private Person selected;
+
+	public Person[] males;
+	public Person[] females;
 
 	/**
 	 * @param pl
@@ -242,9 +245,9 @@ public class PersonEditor extends JPanel {
 
 		// System.out.println(selected.getVaterid() + " " +
 		// selected.getMutterid() + " " + selected.getEhepartnerid());
-		fatherbox.setSelectedIndex(selected.getVaterid() + 1);
-		motherbox.setSelectedIndex(selected.getMutterid() + 1);
-		spousebox.setSelectedIndex(selected.getEhepartnerid() + 1);
+		fatherbox.setSelectedItem(selected.getVater());
+		motherbox.setSelectedItem(selected.getMutter());
+		spousebox.setSelectedItem(selected.getEhepartner());
 		// TODO: Alle Informationen der Person in die Felder eintragen
 	}
 
@@ -267,9 +270,21 @@ public class PersonEditor extends JPanel {
 			selected.setGeschlecht('w');
 			break;
 		}
-		selected.setVater((Person) fatherbox.getSelectedItem());
-		selected.setMutter((Person) motherbox.getSelectedItem());
-		selected.setEhepartner((Person) spousebox.getSelectedItem());
+		if ((fatherbox.getSelectedIndex() == 0) || (fatherbox.getSelectedIndex() == -1)) {
+			selected.setVater(null);
+		} else {
+			selected.setVater(males[fatherbox.getSelectedIndex() - 2]);
+		}
+		if ((motherbox.getSelectedIndex() == 0) || (motherbox.getSelectedIndex() == -1)) {
+			selected.setMutter(null);
+		} else {
+			selected.setMutter(females[motherbox.getSelectedIndex() - 2]);
+		}
+		if ((spousebox.getSelectedIndex() == 0) || (spousebox.getSelectedIndex() == -1)) {
+			selected.setEhepartner(null);
+		} else {
+			selected.setEhepartner(personlist.getList()[spousebox.getSelectedIndex()]);
+		}
 		personlist.fillPersonInfo();
 		mainw.updatePanels();
 
@@ -284,6 +299,9 @@ public class PersonEditor extends JPanel {
 		return formatter;
 	}
 
+	/**
+	 * updates all elements of the panel with the edited personlist
+	 */
 	public void updateList() {
 		jList1Model.clear();
 		fatherboxModel.removeAllElements();
@@ -295,11 +313,11 @@ public class PersonEditor extends JPanel {
 		}
 
 		fatherboxModel.addElement(null);
-		for (Person name : personlist.getMales().getList())
+		for (Person name : males = personlist.getMales().getList())
 			fatherboxModel.addElement(name);
 
 		motherboxModel.addElement(null);
-		for (Person name : personlist.getFemales().getList())
+		for (Person name : females = personlist.getFemales().getList())
 			motherboxModel.addElement(name);
 
 		spouseboxModel.addElement(null);

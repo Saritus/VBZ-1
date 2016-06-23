@@ -13,7 +13,7 @@ public class testMyDate {
 		Assert.assertEquals(2016, dmy.getYear());
 
 		MyDate now = new MyDate();
-		Assert.assertEquals(21, now.getDate());
+		Assert.assertEquals(23, now.getDate());
 		Assert.assertEquals(6, now.getMonth());
 		Assert.assertEquals(2016, now.getYear());
 	}

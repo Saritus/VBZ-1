@@ -8,7 +8,7 @@ import java.io.*;
 /**
  * Shows the relationship between persons in an image
  * 
- * @version 1.0 vom 22.01.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 

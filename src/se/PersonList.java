@@ -5,7 +5,7 @@ import java.text.*;
 /**
  * Stores person objects in a list
  * 
- * @version 1.0 vom 24.03.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 
@@ -259,7 +259,7 @@ public class PersonList {
 
 	/**
 	 * 
-	 * @return
+	 * @return array of string with all information in personlist
 	 */
 	public String[] getStringList() {
 		String[] stringlist = new String[quantity];

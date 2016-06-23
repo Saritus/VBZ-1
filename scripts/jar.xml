@@ -10,14 +10,13 @@
         <jar destfile="${dir.jarfile}/VBZ-1.jar">
             <manifest>
                 <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
-                <attribute name="Rsrc-Main-Class" value="Main"/>
+                <attribute name="Rsrc-Main-Class" value="se.Main"/>
                 <attribute name="Class-Path" value="."/>
                 <attribute name="Rsrc-Class-Path" value="./ mysql-connector-java-5.1.39-bin.jar junit.jar org.hamcrest.core_1.3.0.v201303031735.jar"/>
             </manifest>
             <zipfileset src="jar-in-jar-loader.zip"/>
             <fileset dir="${dir.workspace}/VBZ-1/bin"/>
             <zipfileset dir="${dir.workspace}/VBZ-1/libs" includes="mysql-connector-java-5.1.39-bin.jar"/>
-            <fileset dir="${dir.workspace}/VBZ-1/test"/>
             <zipfileset dir="D:/Programme/eclipse/plugins/org.junit_4.12.0.v201504281640" includes="junit.jar"/>
             <zipfileset dir="D:/Programme/eclipse/plugins" includes="org.hamcrest.core_1.3.0.v201303031735.jar"/>
         </jar>

@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * Date class, that stores day, month and year.
  *
- * @version 1.0 vom 28.01.2016
+ * @version 1.6 vom 22.06.2016
  * @author Sebastian Mischke
  */
 
@@ -20,7 +20,6 @@ public class MyDate extends Date {
 	 *            month of the date
 	 * @param year
 	 *            year of the date
-	 * @throws Exception
 	 */
 	@SuppressWarnings("deprecation")
 	public MyDate(int day, int month, int year) {
@@ -42,9 +41,9 @@ public class MyDate extends Date {
 	/**
 	 * TypeCast-Constructor
 	 * 
-	 * @param an
+	 * @param date
 	 *            object of java.util.Date
-	 * @throws Exception
+	 * 
 	 */
 	@SuppressWarnings("deprecation")
 	public MyDate(Date date) {
