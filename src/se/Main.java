@@ -36,29 +36,30 @@ public class Main extends JPanel {
 		JTabbedPane tabbedPane = new JTabbedPane();
 
 		personlist = new PersonList();
+		personlist = createExamplePersonList();
 		database = new Database();
 
-		settings = new Settings(this);
-		tabbedPane.addTab("", createImageIcon("icons/opt.gif"), settings);
+		personeditor = new PersonEditor(personlist, this);
+		tabbedPane.addTab("", createImageIcon("icons/pe.gif"), personeditor);
 		tabbedPane.setMnemonicAt(0, KeyEvent.VK_1);
-
+		
 		rsviewer = new RSViewer(personlist);
 		tabbedPane.addTab("", createImageIcon("icons/rsv.gif"), rsviewer);
 		tabbedPane.setMnemonicAt(1, KeyEvent.VK_2);
 
-		personeditor = new PersonEditor(personlist, this);
-		tabbedPane.addTab("", createImageIcon("icons/pe.gif"), personeditor);
-		tabbedPane.setMnemonicAt(2, KeyEvent.VK_3);
-
 		persontable = new PersonTable(personlist);
 		tabbedPane.addTab("", createImageIcon("icons/pt.gif"), persontable);
-		tabbedPane.setMnemonicAt(3, KeyEvent.VK_4);
+		tabbedPane.setMnemonicAt(2, KeyEvent.VK_3);
 
 		sql = new SQL(personlist, database, this);
 		tabbedPane.addTab("", createImageIcon("icons/sql.gif"), sql);
+		tabbedPane.setMnemonicAt(3, KeyEvent.VK_4);
+
+		settings = new Settings(this);
+		tabbedPane.addTab("", createImageIcon("icons/opt.gif"), settings);
 		tabbedPane.setMnemonicAt(4, KeyEvent.VK_5);
 
-		sql.setPreferredSize(new Dimension(783, 490));
+		settings.setPreferredSize(new Dimension(783, 490));
 
 		add(tabbedPane);
 

@@ -20,16 +20,16 @@ public class PersonEditor extends JPanel {
 	private JTextField lnametf = new JTextField();
 	private JTextField fnametf = new JTextField();
 	private JComboBox genderbox = new JComboBox();
-	private DefaultComboBoxModel jComboBox1Model = new DefaultComboBoxModel();
+	private DefaultComboBoxModel genderboxModel = new DefaultComboBoxModel();
 	private JLabel fatherlabel = new JLabel();
 	private JComboBox fatherbox = new JComboBox();
-	private DefaultComboBoxModel jComboBox2Model = new DefaultComboBoxModel();
+	private DefaultComboBoxModel fatherboxModel = new DefaultComboBoxModel();
 	private JLabel motherlabel = new JLabel();
 	private JComboBox motherbox = new JComboBox();
-	private DefaultComboBoxModel jComboBox3Model = new DefaultComboBoxModel();
+	private DefaultComboBoxModel motherboxModel = new DefaultComboBoxModel();
 	private JLabel spouselabel = new JLabel();
 	private JComboBox spousebox = new JComboBox();
-	private DefaultComboBoxModel jComboBox4Model = new DefaultComboBoxModel();
+	private DefaultComboBoxModel spouseboxModel = new DefaultComboBoxModel();
 	private JButton acceptbutton = new JButton();
 	private JButton cancelbutton = new JButton();
 	private JList jList1 = new JList();
@@ -77,12 +77,17 @@ public class PersonEditor extends JPanel {
 		newbutton.setBounds(13, 460, 135, 25);
 		newbutton.setText("Neu");
 		newbutton.setMargin(new Insets(2, 2, 2, 2));
+		newbutton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent evt) {
+				newbutton_ActionPerformed(evt);
+			}
+		});
 		cp.add(newbutton);
 		lnametf.setBounds(163, 13, 150, 25);
 		cp.add(lnametf);
 		fnametf.setBounds(163, 59, 150, 25);
 		cp.add(fnametf);
-		genderbox.setModel(jComboBox1Model);
+		genderbox.setModel(genderboxModel);
 		genderbox.setBounds(163, 151, 150, 25);
 		genderbox.addItem("Männlich");
 		genderbox.addItem("Weiblich");
@@ -91,19 +96,19 @@ public class PersonEditor extends JPanel {
 		fatherlabel.setBounds(13, 197, 150, 25);
 		fatherlabel.setText("Vater");
 		cp.add(fatherlabel);
-		fatherbox.setModel(jComboBox2Model);
+		fatherbox.setModel(fatherboxModel);
 		fatherbox.setBounds(163, 197, 150, 25);
 		cp.add(fatherbox);
 		motherlabel.setBounds(13, 243, 150, 25);
 		motherlabel.setText("Mutter");
 		cp.add(motherlabel);
-		motherbox.setModel(jComboBox3Model);
+		motherbox.setModel(motherboxModel);
 		motherbox.setBounds(163, 243, 150, 25);
 		cp.add(motherbox);
 		spouselabel.setBounds(13, 289, 150, 25);
 		spouselabel.setText("Ehepartner");
 		cp.add(spouselabel);
-		spousebox.setModel(jComboBox4Model);
+		spousebox.setModel(spouseboxModel);
 		spousebox.setBounds(163, 289, 150, 25);
 		cp.add(spousebox);
 		acceptbutton.setBounds(166, 460, 135, 25);
@@ -184,6 +189,11 @@ public class PersonEditor extends JPanel {
 		// TODO Ausgewählte Person löschen
 	}
 
+	private void newbutton_ActionPerformed(ActionEvent evt) {
+		// TODO Neue Person erstellen
+		System.out.println(gebdattf.getText());
+	}
+
 	private void selectbutton_ActionPerformed(ActionEvent evt) {
 		if (jList1.getSelectedIndex() != -1) {
 			System.out.println(jList1.getSelectedIndex());
@@ -219,6 +229,15 @@ public class PersonEditor extends JPanel {
 		for (int i = 0; i < personlist.getQuantity(); i++) {
 			jList1Model.addElement(infos[i]);
 		}
+
+		for (String name : personlist.getMales().getNames())
+			fatherboxModel.addElement(name);
+
+		for (String name : personlist.getFemales().getNames())
+			motherboxModel.addElement(name);
+
+		for (String name : personlist.getNames())
+			spouseboxModel.addElement(name);
 	}
 
 	/**

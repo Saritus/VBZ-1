@@ -187,18 +187,28 @@ public class PersonList {
 	 * 
 	 * @return array with all the names of male persons in the personlist
 	 */
-	public String[] getMales() {
-		// TODO: return all males in list
-		return null;
+	public PersonList getMales() {
+		PersonList pl = new PersonList();
+		for (int i = 0; i < quantity; i++) {
+			if (list[i].getGeschlecht() == 'm') {
+				pl.addPerson(list[i]);
+			}
+		}
+		return pl;
 	}
 
 	/**
 	 * 
 	 * @return array with all the names of female persons in the personlist
 	 */
-	public String[] getFemales() {
-		// TODO: return all females in list
-		return null;
+	public PersonList getFemales() {
+		PersonList pl = new PersonList();
+		for (int i = 0; i < quantity; i++) {
+			if (list[i].getGeschlecht() == 'w') {
+				pl.addPerson(list[i]);
+			}
+		}
+		return pl;
 	}
 
 	/**
@@ -211,6 +221,10 @@ public class PersonList {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	public String[] getStringList() {
 		String[] stringlist = new String[quantity];
 		for (int i = 0; i < quantity; i++) {
@@ -226,5 +240,17 @@ public class PersonList {
 	public void clear() {
 		list = new Person[0];
 		quantity = 0;
+	}
+
+	/**
+	 * 
+	 * @return names of persons in the list
+	 */
+	public String[] getNames() {
+		String names[] = new String[quantity];
+		for (int i = 0; i < quantity; i++) {
+			names[i] = list[i].getName();
+		}
+		return names;
 	}
 }

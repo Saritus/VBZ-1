@@ -23,7 +23,7 @@ public class MyDate extends Date {
 	 * @throws Exception
 	 */
 	public MyDate(int day, int month, int year) throws Exception {
-		super(year, month - 1, day);
+		super(year - 1900, month - 1, day);
 		if ((this.getDate() == day) && (this.getMonth() == month - 1) && (this.getYear() == year)) {
 			throw new Exception("Invalid date");
 		}
@@ -33,7 +33,7 @@ public class MyDate extends Date {
 	 * Constructor for the current date
 	 */
 	public MyDate() {
-		super(new Date().getYear() + 1900, new Date().getMonth(), new Date().getDate());
+		super(new Date().getYear(), new Date().getMonth(), new Date().getDate());
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class MyDate extends Date {
 	 * @throws Exception
 	 */
 	public MyDate(Date date) throws Exception {
-		this(date.getYear(), date.getMonth(), date.getDate());
+		this(date.getYear() + 1900, date.getMonth(), date.getDate());
 	}
 
 	public MyDate(long millisec) {
@@ -53,5 +53,9 @@ public class MyDate extends Date {
 
 	public int getMonth() {
 		return super.getMonth() + 1;
+	}
+
+	public String toString() {
+		return getYear() + "-" + getMonth() + "-" + getDate();
 	}
 }
